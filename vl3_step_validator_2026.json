@@ -1327,7 +1327,7 @@
         "maximum": 2500,
         "default": 1250
       },
-      "Delay.Tempo": {
+      "Delay.Tempo.Guitar": {
         "type": "integer",
         "minimum": 45,
         "maximum": 300,
@@ -1422,7 +1422,7 @@
         "Delay.Pan.Guitar",
         "Delay.DelayTime_L.Guitar",
 		"Delay.DelayTime_R.Guitar",
-        "Delay.Tempo",
+        "Delay.Tempo.Guitar",
         "Mixer_LW.Level.Gtr_Delay",
         "Delay.ModSpeed.Guitar",
         "Delay.ModDepth.Guitar",
@@ -3937,8 +3937,7 @@
           "Lo Cut 3"
         ],
         "default": "Lo-Fi"
-      },
-	  
+      },	  
       "Macro.Delay_HiCut.Voice": {
         "type": "integer",
         "minimum": 20,
@@ -4101,6 +4100,12 @@
         ],
         "default": "Off"
       },
+	  "Delay.Tempo.Voice": {
+        "type": "integer",
+        "minimum": 45,
+        "maximum": 300,
+        "default": 172
+      },
       "Ducking.Threshold.Voc_Delay": {
         "type": "integer",
         "minimum": -61,
@@ -4118,12 +4123,12 @@
         "Macro.Delay_LoCut.Voice",
         "Mixer_L.Lead2DelayPan",
         "Delay.FB_R.Voice",
-		"Delay.FB_L.Voice"
+		"Delay.FB_L.Voice",
         "Delay.XFB_L_R.Voice",
 		"Delay.XFB_R_L.Voice",
         "Delay.DelayTime_L.Voice",
 		"Delay.DelayTime_R.Voice",
-        "Delay.Tempo",
+        "Delay.Tempo.Voice",
         "Delay.Source.Voice",
         "Mixer_LW.Level.Voc_Delay",
         "LeadLevel.Delay",
