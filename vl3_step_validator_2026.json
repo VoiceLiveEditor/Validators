@@ -41,7 +41,7 @@
           "Wave 9",
           "Wave 10",
           "Guitar Mix",
-          "Aux In "
+          "Aux In"
         ],
         "default": "Wave 6"
 	  },
@@ -191,7 +191,7 @@
           "Syncopated Acc",
           "16th to 8ths",
           "Swung Eights",
-          "Straight Eigths",
+          "Straight Eighths",
           "Eighth Triplets",
           "Latino Accents",
           "Latino",
@@ -267,7 +267,7 @@
           "Stutter",
           "Reverse Sample",
           "Forward Sample",
-          "Eigth Sample"
+          "Eighth Sample"
         ],
         "default": "Reverse Sample"
       },
@@ -1168,7 +1168,7 @@
           "Flashback Tape",
           "Flashback Lo-Fi",
           "Flashback Slap",
-          " Edge-Y MOD",
+          "Edge-Y MOD",
           "Analog Modular",
           "Quarter",
           "Dotted 1/8",
@@ -1177,7 +1177,7 @@
           "Multi-Tap",
           "300ms",
           "Long & Thin",
-          " Reverb Tank"
+          "Reverb Tank"
         ],
         "default": "Quarter"
       },
@@ -1449,7 +1449,7 @@
         "type": "integer",
         "minimum": 45,
         "maximum": 300,
-        "default": 0
+        "default": 172
       },
       "GtrRhythm.Depth": {
         "type": "integer",
@@ -3934,7 +3934,7 @@
         "enum": [
           "Half",
           "Quarter",
-          "Eigth",
+          "Eighth",
           "Triplet",
           "Dotted 1/8",
           "Dotted 1/4",
