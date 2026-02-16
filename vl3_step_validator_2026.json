@@ -41,7 +41,7 @@
           "Wave 9",
           "Wave 10",
           "Guitar Mix",
-          "Aux In"
+          "Aux In "
         ],
         "default": "Wave 6"
 	  },
@@ -191,7 +191,7 @@
           "Syncopated Acc",
           "16th to 8ths",
           "Swung Eights",
-          "Straight Eighths",
+          "Straight Eigths",
           "Eighth Triplets",
           "Latino Accents",
           "Latino",
@@ -267,7 +267,7 @@
           "Stutter",
           "Reverse Sample",
           "Forward Sample",
-          "Eighth Sample"
+          "Eigth Sample"
         ],
         "default": "Reverse Sample"
       },
@@ -1168,7 +1168,7 @@
           "Flashback Tape",
           "Flashback Lo-Fi",
           "Flashback Slap",
-          "Edge-Y MOD",
+          " Edge-Y MOD",
           "Analog Modular",
           "Quarter",
           "Dotted 1/8",
@@ -1177,7 +1177,7 @@
           "Multi-Tap",
           "300ms",
           "Long & Thin",
-          "Reverb Tank"
+          " Reverb Tank"
         ],
         "default": "Quarter"
       },
@@ -1449,7 +1449,7 @@
         "type": "integer",
         "minimum": 45,
         "maximum": 300,
-        "default": 172
+        "default": 0
       },
       "GtrRhythm.Depth": {
         "type": "integer",
@@ -1495,16 +1495,8 @@
       },
       "GtrRhythm.Target": {
         "type": "string",
-        "enum": [
-          "Lead Level",
-          "L.Gender",
-          "Lead Pan",
-          "Harmony Lev",
-          "Harmony Pan",
-          "L+H Level",
-          "L+H Pan"
-        ],
-        "default": "Lead Level"
+        "enum": ["Level","Pan"],
+        "default": "Level"
       }
 	  },
       "required": [
@@ -3934,7 +3926,7 @@
         "enum": [
           "Half",
           "Quarter",
-          "Eighth",
+          "Eigth",
           "Triplet",
           "Dotted 1/8",
           "Dotted 1/4",
