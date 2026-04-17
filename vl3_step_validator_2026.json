@@ -6,7 +6,7 @@
   "$comment": "Created by Ian Cowdery",
   "Vocal Synth": {
     "type": "object",
-	"additionalProperties": false,
+    "additionalProperties": false,
     "properties": {
       "Synth.Style": {
         "type": "string",
@@ -27,7 +27,7 @@
         ],
         "default": "Synth 1"
       },
-	  "Synth.Carrier": {
+      "Synth.Carrier": {
         "type": "string",
         "enum": [
           "Wave 1",
@@ -44,8 +44,8 @@
           "Aux In "
         ],
         "default": "Wave 1"
-	  },
-	  "Synth.Carrier_Shift": {
+      },
+      "Synth.Carrier_Shift": {
         "type": "string",
         "enum": [
           "2 Octave Down",
@@ -55,7 +55,7 @@
         ],
         "default": "Unison"
       },
-	  "Synth.Note_Source": {
+      "Synth.Note_Source": {
         "type": "string",
         "enum": [
           "Lead",
@@ -104,47 +104,47 @@
         "minimum": 1,
         "maximum": 100,
         "default": 50
-      }, 
+      },
       "Synth.Portamento": {
         "type": "number",
         "minimum": 0,
         "maximum": 5000,
         "default": 4
       },
-	  "Synth.Harmonies": {
+      "Synth.Harmonies": {
         "type": "string",
         "enum": [
           "Off",
           "On"
         ],
         "default": "Off"
-	  },
+      },
       "Synth.Ess_Level": {
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
         "default": 5
       }
-	  },
-      "required": [
-	    "Synth.Style",
-        "Mixer_L.Synth",
-        "HitControl.Synth",
-        "Synth.Gender",
-        "Synth.Lead_Mix",
-        "Synth.Carrier_Mix",
-        "Synth.Resolution",
-        "Synth.Carrier",
-        "Synth.Carrier_Shift",
-        "Synth.Note_Source",
-        "Synth.Portamento",
-		"Synth.Harmonies",
-        "Synth.Ess_Level"
-      ]
     },
+    "required": [
+      "Synth.Style",
+      "Mixer_L.Synth",
+      "HitControl.Synth",
+      "Synth.Gender",
+      "Synth.Lead_Mix",
+      "Synth.Carrier_Mix",
+      "Synth.Resolution",
+      "Synth.Carrier",
+      "Synth.Carrier_Shift",
+      "Synth.Note_Source",
+      "Synth.Portamento",
+      "Synth.Harmonies",
+      "Synth.Ess_Level"
+    ]
+  },
   "Vocal Rhythm": {
     "type": "object",
-	"additionalProperties": false,
+    "additionalProperties": false,
     "properties": {
       "Rhythmic.Style": {
         "type": "string",
@@ -163,7 +163,7 @@
         ],
         "default": "Chopper"
       },
-	  "Rhythmic.Target": {
+      "Rhythmic.Target": {
         "type": "string",
         "enum": [
           "Lead Level",
@@ -205,7 +205,7 @@
         ],
         "default": "Square"
       },
-	  "Rhythmic.Division": {
+      "Rhythmic.Division": {
         "type": "string",
         "enum": [
           "8x1/4",
@@ -247,19 +247,19 @@
         ],
         "default": "Off"
       }
-	  },
-      "required": [
-	    "Rhythmic.Style", 
-	    "Rhythmic.Rhythmn",
-		"Rhythmic.Target",
-		"Rhythmic.Division",
-        "Rhythmic.Depth",
-        "HitControl.Rhythmic"        
-      ]
     },
+    "required": [
+      "Rhythmic.Style",
+      "Rhythmic.Rhythmn",
+      "Rhythmic.Target",
+      "Rhythmic.Division",
+      "Rhythmic.Depth",
+      "HitControl.Rhythmic"
+    ]
+  },
   "Vocal Stutter": {
     "type": "object",
-	"additionalProperties": false,
+    "additionalProperties": false,
     "properties": {
       "Stutter.Style": {
         "type": "string",
@@ -323,19 +323,19 @@
         ],
         "default": "1/32"
       }
-	  },
-      "required": [
-	    "Stutter.Style",
-        "HitControl.Stutter",
-        "Stutter.Sample_Reverse",
-        "Stutter.Path",
-        "Stutter.Sample_Mode",
-        "Stutter.Sample_Division"
-      ]
     },
+    "required": [
+      "Stutter.Style",
+      "HitControl.Stutter",
+      "Stutter.Sample_Reverse",
+      "Stutter.Path",
+      "Stutter.Sample_Mode",
+      "Stutter.Sample_Division"
+    ]
+  },
   "Guitar Wah": {
     "type": "object",
-	"additionalProperties": false,
+    "additionalProperties": false,
     "properties": {
       "Wah.Style": {
         "type": "string",
@@ -353,7 +353,7 @@
         ],
         "default": "Classic Wah"
       },
-	  "Wah.Order": {
+      "Wah.Order": {
         "type": "string",
         "enum": [
           "2nd",
@@ -378,7 +378,7 @@
         ],
         "default": "Manual"
       },
-	  "Wah.HiCut": {
+      "Wah.HiCut": {
         "type": "integer",
         "minimum": 20,
         "maximum": 20480,
@@ -407,9 +407,9 @@
         "minimum": 0,
         "maximum": 100,
         "default": 10,
-		"multipleOf": 10
+        "multipleOf": 10
       },
-     "Pedal.Wah_MinPos": {
+      "Pedal.Wah_MinPos": {
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
@@ -420,7 +420,7 @@
         "minimum": 0,
         "maximum": 100,
         "default": 0,
-		"multipleOf": 10
+        "multipleOf": 10
       },
       "Wah.OutputTrim": {
         "type": "integer",
@@ -444,39 +444,39 @@
         "maximum": 600,
         "default": 120
       }
-	  },
-      "required": [
-	    "Wah.Style",
-	    "Wah.SubType",
-		"Wah.Shape", 
-		"Wah.Order",
-        "Wah.HiCut",
-        "Pedal.Wah_MaxPos",
-        "Wah.Resonance",
-        "Wah.Fmax",
-        "Wah.Sensitivity",
-        "Pedal.Wah_MinPos",
-        "Wah.Response",
-        "Wah.OutputTrim",
-        "HitControl.Gtr_Wah",
-        "Wah.Bpm"
-      ]
     },
+    "required": [
+      "Wah.Style",
+      "Wah.SubType",
+      "Wah.Shape",
+      "Wah.Order",
+      "Wah.HiCut",
+      "Pedal.Wah_MaxPos",
+      "Wah.Resonance",
+      "Wah.Fmax",
+      "Wah.Sensitivity",
+      "Pedal.Wah_MinPos",
+      "Wah.Response",
+      "Wah.OutputTrim",
+      "HitControl.Gtr_Wah",
+      "Wah.Bpm"
+    ]
+  },
   "Guitar Octaver": {
     "type": "object",
-	"additionalProperties": false,
+    "additionalProperties": false,
     "properties": {
-	  "Octaver.Style": {
-      "type": "string",
-      "enum": [
-        "Octave Down",
-        "Mix Octave Down",
-        "Fourth Down",
-        "Fifth Up",
-        "Octave Up",
-        "2 Oct Down"
-      ],
-      "default": "Octave Down"
+      "Octaver.Style": {
+        "type": "string",
+        "enum": [
+          "Octave Down",
+          "Mix Octave Down",
+          "Fourth Down",
+          "Fifth Up",
+          "Octave Up",
+          "2 Oct Down"
+        ],
+        "default": "Octave Down"
       },
       "Octaver.Mix": {
         "type": "integer",
@@ -490,7 +490,7 @@
         "maximum": 24,
         "default": 0
       },
-       "HitControl.Gtr_Shift": {
+      "HitControl.Gtr_Shift": {
         "type": "string",
         "enum": [
           "Off",
@@ -499,20 +499,20 @@
           "Hit-"
         ],
         "default": "Off"
-	   }
-		},
-        "required": [
-		  "Octaver.Style",
-          "Octaver.Mix",
-          "Octaver.Interval",
-          "HitControl.Gtr_Shift"
-        ]
-      },
+      }
+    },
+    "required": [
+      "Octaver.Style",
+      "Octaver.Mix",
+      "Octaver.Interval",
+      "HitControl.Gtr_Shift"
+    ]
+  },
   "Guitar Compressor": {
     "type": "object",
-	"additionalProperties": false,
+    "additionalProperties": false,
     "properties": {
-		"GtrComp.Style.Pre": {
+      "GtrComp.Style.Pre": {
         "type": "string",
         "enum": [
           "Subtle Tube",
@@ -526,22 +526,22 @@
       "GtrComp.Ratio.Pre": {
         "type": "string",
         "enum": [
-		  "1.0",
-		  "1.1",
-		  "1.2",
-		  "1.4",
-		  "1.6",
-		  "1.8",
-		  "2.0",
-		  "2.5",
-		  "3.2",
-		  "4.0",
-		  "5.6",
-		  "8.0",
-		  "16.0",
-		  "32.0",
-		  "64.0"
-		 ],
+          "1.0",
+          "1.1",
+          "1.2",
+          "1.4",
+          "1.6",
+          "1.8",
+          "2.0",
+          "2.5",
+          "3.2",
+          "4.0",
+          "5.6",
+          "8.0",
+          "16.0",
+          "32.0",
+          "64.0"
+        ],
         "default": "1.0"
       },
       "GtrComp.Threshold.Pre": {
@@ -561,7 +561,7 @@
         "minimum": 15,
         "maximum": 3000,
         "default": 15
-      }, 
+      },
       "HitControl.Gtr_Compressor": {
         "type": "string",
         "enum": [
@@ -578,20 +578,20 @@
         "maximum": 15,
         "default": 0
       }
-	  },
-      "required": [
-	    "GtrComp.Style.Pre",
-        "GtrComp.Ratio.Pre",
-        "GtrComp.Threshold.Pre",
-        "GtrComp.Attack.Pre",
-        "GtrComp.Release.Pre",
-        "HitControl.Gtr_Compressor",
-        "GtrComp.MakeUpGain.Pre"
-      ]
     },
+    "required": [
+      "GtrComp.Style.Pre",
+      "GtrComp.Ratio.Pre",
+      "GtrComp.Threshold.Pre",
+      "GtrComp.Attack.Pre",
+      "GtrComp.Release.Pre",
+      "HitControl.Gtr_Compressor",
+      "GtrComp.MakeUpGain.Pre"
+    ]
+  },
   "Vocal Double": {
     "type": "object",
-	"additionalProperties": false,
+    "additionalProperties": false,
     "properties": {
       "Doubling.HumanAmount": {
         "type": "integer",
@@ -692,25 +692,25 @@
         ],
         "default": "Off"
       },
-	  "Doubling.OctShift.V1": {
+      "Doubling.OctShift.V1": {
         "type": "integer",
         "minimum": -1200,
         "maximum": 1200,
         "default": 0
       },
-	  "Doubling.OctShift.V2": {
+      "Doubling.OctShift.V2": {
         "type": "integer",
         "minimum": -1200,
         "maximum": 1200,
         "default": 0
       },
-	  "Doubling.OctShift.V3": {
+      "Doubling.OctShift.V3": {
         "type": "integer",
         "minimum": -1200,
         "maximum": 1200,
         "default": 0
       },
-	  "Doubling.OctShift.V4": {
+      "Doubling.OctShift.V4": {
         "type": "integer",
         "minimum": -1200,
         "maximum": 1200,
@@ -836,175 +836,180 @@
         "maximum": 0,
         "default": -61
       }
-	  },
-      "required": [
-	    "Doubling.HumanAmount",
-        "Doubling.HumanStyle",
-        "Doubling.GroupStyle",
-        "Mixer_L.Doubling",
-        "LeadLevel.Double",
-        "HitControl.Double",
-        "Doubling.Voicing.V1",
-        "Doubling.Voicing.V2",
-        "Doubling.Voicing.V3",
-        "Doubling.Voicing.V4",
-		"Doubling.OctShift.V1",
-		"Doubling.OctShift.V2",
-		"Doubling.OctShift.V3",
-		"Doubling.OctShift.V4",
-        "Doubling.Portamento.V1",
-		"Doubling.Portamento.V2",
-		"Doubling.Portamento.V3",
-		"Doubling.Portamento.V4",
-        "Doubling.Smoothing.V1",
-		"Doubling.Smoothing.V2",
-		"Doubling.Smoothing.V3",
-		"Doubling.Smoothing.V4",
-        "Doubling.Gender.V1",
-		"Doubling.Gender.V2",
-		"Doubling.Gender.V3",
-		"Doubling.Gender.V4",
-        "Mixer_LP.Pan.D1",
-		"Mixer_LP.Pan.D2",
-		"Mixer_LP.Pan.D3",
-		"Mixer_LP.Pan.D4",
-        "Mixer_LP.Level.D1",
-		"Mixer_LP.Level.D2",
-		"Mixer_LP.Level.D3",
-		"Mixer_LP.Level.D4"
-      ]
     },
-  "Vocal Transducer": {
-  "type": "object",
-  "additionalProperties": false,
-  "properties": {
-    "Transducer.Style": {
-      "type": "string",
-      "enum": [
-	    "Megaphone",
-		"Radio",
-		"On The Phone",
-		"Overdrive",
-		"Buzz Cut",
-		"Stack",
-		"Tweed",
-		"Combo",
-		"Hi Pass",
-		"BeatBox"
-		],
-      "default": "Megaphone"
-    },
-    "Transducer.DistortionType": {
-      "type": "string",
-      "enum": [
-	    "Saturation 1",
-		"Saturation 2",
-		"Saturation 3",
-		"Overdrive 1",
-		"Overdrive 2",
-		"Overdrive 3",
-		"Overdrive 4",
-		"Overdrive 5",
-		"Distortion 1",
-		"Distortion 2",
-		"Distortion 3",
-		"Distortion 4",
-		"Fuzz 1",
-		"Fuzz 2",
-		"Fuzz 3"
-		],
-      "default": "Overdrive 2"
-    },
-    "Transducer.Routing": {
-      "type": "string",
-      "enum": [
-	    "Output",
-		"FX-Lead",
-		"FX-Harm",
-		"Lead",
-		"Harmony"
-		],
-      "default": "Output"
-    },
-    "Transducer.BandLimitHP": {
-      "type": "integer",
-      "minimum": 20,
-      "maximum": 20480,
-      "default": 479
-    },
-    "Transducer.BandLimitLP": {
-      "type": "integer",
-      "minimum": 20,
-      "maximum": 20480,
-      "default": 4833
-    },
-    "Transducer.PresenceGain": {
-      "type": "integer",
-      "minimum": -20,
-      "maximum": 20,
-      "default": 7
-    },
-    "Transducer.PresenceFC": {
-      "type": "integer",
-      "minimum": 359,
-      "maximum": 5915,
-      "default": 2032
-    },
-    "Transducer.DistortionAmount": {
-      "type": "integer",
-      "minimum": 0,
-      "maximum": 100,
-      "default": 30
-    },
-    "AutoGate.ManualThresholdT": {
-      "type": "integer",
-      "minimum": -61,
-      "maximum": 0,
-      "default": -50
-    },
-    "Transducer.PresenceBW": {
-      "type": "number",
-      "minimum": 0.1,
-      "maximum": 3.09,
-      "default": 0.42
-    },
-    "Transducer.PreGain": {
-      "type": "integer",
-      "minimum": -20,
-      "maximum": 20,
-      "default": 0
-    },      
-    "Transducer.PostGain": {
-      "type": "integer",
-      "minimum": -20,
-      "maximum": 20,
-      "default": -4
-    },
-    "HitControl.Transducer": {
-      "type": "string",
-      "enum": ["Off", "On", "Hit+", "Hit-"],
-      "default": "Off"
-    }
+    "required": [
+      "Doubling.HumanAmount",
+      "Doubling.HumanStyle",
+      "Doubling.GroupStyle",
+      "Mixer_L.Doubling",
+      "LeadLevel.Double",
+      "HitControl.Double",
+      "Doubling.Voicing.V1",
+      "Doubling.Voicing.V2",
+      "Doubling.Voicing.V3",
+      "Doubling.Voicing.V4",
+      "Doubling.OctShift.V1",
+      "Doubling.OctShift.V2",
+      "Doubling.OctShift.V3",
+      "Doubling.OctShift.V4",
+      "Doubling.Portamento.V1",
+      "Doubling.Portamento.V2",
+      "Doubling.Portamento.V3",
+      "Doubling.Portamento.V4",
+      "Doubling.Smoothing.V1",
+      "Doubling.Smoothing.V2",
+      "Doubling.Smoothing.V3",
+      "Doubling.Smoothing.V4",
+      "Doubling.Gender.V1",
+      "Doubling.Gender.V2",
+      "Doubling.Gender.V3",
+      "Doubling.Gender.V4",
+      "Mixer_LP.Pan.D1",
+      "Mixer_LP.Pan.D2",
+      "Mixer_LP.Pan.D3",
+      "Mixer_LP.Pan.D4",
+      "Mixer_LP.Level.D1",
+      "Mixer_LP.Level.D2",
+      "Mixer_LP.Level.D3",
+      "Mixer_LP.Level.D4"
+    ]
   },
-  "required": [
-    "Transducer.Style",
-    "Transducer.DistortionType",
-    "Transducer.Routing",
-    "Transducer.BandLimitHP",
-    "Transducer.BandLimitLP",
-    "Transducer.PresenceGain",
-    "Transducer.PresenceFC",
-    "Transducer.DistortionAmount",
-    "AutoGate.ManualThresholdT",
-    "Transducer.PresenceBW",
-    "Transducer.PreGain",
-    "Transducer.PostGain",
-    "HitControl.Transducer"
-  ]
-},
+  "Vocal Transducer": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "Transducer.Style": {
+        "type": "string",
+        "enum": [
+          "Megaphone",
+          "Radio",
+          "On The Phone",
+          "Overdrive",
+          "Buzz Cut",
+          "Stack",
+          "Tweed",
+          "Combo",
+          "Hi Pass",
+          "BeatBox"
+        ],
+        "default": "Megaphone"
+      },
+      "Transducer.DistortionType": {
+        "type": "string",
+        "enum": [
+          "Saturation 1",
+          "Saturation 2",
+          "Saturation 3",
+          "Overdrive 1",
+          "Overdrive 2",
+          "Overdrive 3",
+          "Overdrive 4",
+          "Overdrive 5",
+          "Distortion 1",
+          "Distortion 2",
+          "Distortion 3",
+          "Distortion 4",
+          "Fuzz 1",
+          "Fuzz 2",
+          "Fuzz 3"
+        ],
+        "default": "Overdrive 2"
+      },
+      "Transducer.Routing": {
+        "type": "string",
+        "enum": [
+          "Output",
+          "FX-Lead",
+          "FX-Harm",
+          "Lead",
+          "Harmony"
+        ],
+        "default": "Output"
+      },
+      "Transducer.BandLimitHP": {
+        "type": "integer",
+        "minimum": 20,
+        "maximum": 20480,
+        "default": 479
+      },
+      "Transducer.BandLimitLP": {
+        "type": "integer",
+        "minimum": 20,
+        "maximum": 20480,
+        "default": 4833
+      },
+      "Transducer.PresenceGain": {
+        "type": "integer",
+        "minimum": -20,
+        "maximum": 20,
+        "default": 7
+      },
+      "Transducer.PresenceFC": {
+        "type": "integer",
+        "minimum": 359,
+        "maximum": 5915,
+        "default": 2032
+      },
+      "Transducer.DistortionAmount": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 100,
+        "default": 30
+      },
+      "AutoGate.ManualThresholdT": {
+        "type": "integer",
+        "minimum": -61,
+        "maximum": 0,
+        "default": -50
+      },
+      "Transducer.PresenceBW": {
+        "type": "number",
+        "minimum": 0.1,
+        "maximum": 3.09,
+        "default": 0.42
+      },
+      "Transducer.PreGain": {
+        "type": "integer",
+        "minimum": -20,
+        "maximum": 20,
+        "default": 0
+      },
+      "Transducer.PostGain": {
+        "type": "integer",
+        "minimum": -20,
+        "maximum": 20,
+        "default": -4
+      },
+      "HitControl.Transducer": {
+        "type": "string",
+        "enum": [
+          "Off",
+          "On",
+          "Hit+",
+          "Hit-"
+        ],
+        "default": "Off"
+      }
+    },
+    "required": [
+      "Transducer.Style",
+      "Transducer.DistortionType",
+      "Transducer.Routing",
+      "Transducer.BandLimitHP",
+      "Transducer.BandLimitLP",
+      "Transducer.PresenceGain",
+      "Transducer.PresenceFC",
+      "Transducer.DistortionAmount",
+      "AutoGate.ManualThresholdT",
+      "Transducer.PresenceBW",
+      "Transducer.PreGain",
+      "Transducer.PostGain",
+      "HitControl.Transducer"
+    ]
+  },
   "Guitar Reverb": {
     "type": "object",
-	"additionalProperties": false,
+    "additionalProperties": false,
     "properties": {
       "Reverb.Style.Guitar": {
         "type": "string",
@@ -1093,7 +1098,7 @@
         "minimum": 0,
         "maximum": 20000,
         "default": 2700,
-		"multipleOf": 10
+        "multipleOf": 10
       },
       "Reverb.PreDelay.Guitar": {
         "type": "integer",
@@ -1101,7 +1106,7 @@
         "maximum": 100,
         "default": 15
       },
-	  "Reverb.DryLevel.Guitar": {
+      "Reverb.DryLevel.Guitar": {
         "type": "integer",
         "minimum": -25,
         "maximum": 0,
@@ -1177,35 +1182,35 @@
         "type": "integer",
         "minimum": 100,
         "maximum": 2000,
-		"multipleOf": 10,
+        "multipleOf": 10,
         "default": 100
       }
-	  },
-      "required": [
-	    "Reverb.Style.Guitar",
-        "Reverb.HiColor.Guitar",
-        "Mixer_LW.Width.Gtr_Reverb",
-        "Reverb.HiFactor.Guitar",
-        "Reverb.LoColor.Guitar",
-        "Reverb.Decay.Guitar",
-		"Reverb.DryLevel.Guitar",
-        "Reverb.PreDelay.Guitar",
-        "Reverb.EarlyLevel.Guitar",
-        "Reverb.Diffuse.Guitar",
-        "Reverb.ModSpeed.Guitar",
-        "Reverb.ModDepth.Guitar",
-        "Reverb.ReverbLevel.Guitar",
-        "Mixer_LW.Level.Gtr_Reverb",
-        "HitControl.Gtr_Reverb",
-        "Ducking.Threshold.Gtr_Reverb",
-        "Ducking.Level.Gtr_Reverb",
-        "Ducking.Speed.Gtr_Reverb",
-        "Ducking.Enable.Gtr_Reverb"
-      ]
     },
+    "required": [
+      "Reverb.Style.Guitar",
+      "Reverb.HiColor.Guitar",
+      "Mixer_LW.Width.Gtr_Reverb",
+      "Reverb.HiFactor.Guitar",
+      "Reverb.LoColor.Guitar",
+      "Reverb.Decay.Guitar",
+      "Reverb.DryLevel.Guitar",
+      "Reverb.PreDelay.Guitar",
+      "Reverb.EarlyLevel.Guitar",
+      "Reverb.Diffuse.Guitar",
+      "Reverb.ModSpeed.Guitar",
+      "Reverb.ModDepth.Guitar",
+      "Reverb.ReverbLevel.Guitar",
+      "Mixer_LW.Level.Gtr_Reverb",
+      "HitControl.Gtr_Reverb",
+      "Ducking.Threshold.Gtr_Reverb",
+      "Ducking.Level.Gtr_Reverb",
+      "Ducking.Speed.Gtr_Reverb",
+      "Ducking.Enable.Gtr_Reverb"
+    ]
+  },
   "Guitar Delay": {
     "type": "object",
-	"additionalProperties": false,
+    "additionalProperties": false,
     "properties": {
       "Delay.Style.Guitar": {
         "type": "string",
@@ -1347,7 +1352,7 @@
         "maximum": 2500,
         "default": 500
       },
-	  "Delay.DelayTime_R.Guitar": {
+      "Delay.DelayTime_R.Guitar": {
         "type": "integer",
         "minimum": 0,
         "maximum": 2500,
@@ -1376,8 +1381,8 @@
       "Delay.ModSpeed.Guitar": {
         "type": "number",
         "minimum": 0.05,
-        "maximum": 10.00,
-        "default": 1.00
+        "maximum": 10,
+        "default": 1
       },
       "Delay.ModDepth.Guitar": {
         "type": "integer",
@@ -1391,7 +1396,7 @@
         "maximum": 100,
         "default": 0
       },
-	  "Delay.XFB_R_L.Guitar": {
+      "Delay.XFB_R_L.Guitar": {
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
@@ -1421,7 +1426,7 @@
         "maximum": 0,
         "default": 0
       },
-	  "Ducking.Enable.Gtr_Delay": {
+      "Ducking.Enable.Gtr_Delay": {
         "type": "string",
         "enum": [
           "Off",
@@ -1435,38 +1440,38 @@
         "maximum": 2000,
         "default": 600
       }
-	  },
-      "required": [
-	    "Delay.Style.Guitar",
-        "Delay.Source.Guitar",
-        "HitControl.Gtr_Delay",
-        "Delay.Division_L.Guitar",
-        "Delay.Division_R.Guitar",
-        "Delay.Filter_Style.Guitar",
-        "Delay.FeedbackControl.Guitar",
-        "Macro.Delay_HiCut.Guitar",
-        "Macro.Delay_LoCut.Guitar",
-        "Delay.Pan.Guitar",
-        "Delay.DelayTime_L.Guitar",
-		"Delay.DelayTime_R.Guitar",
-        "Delay.Tempo.Guitar",
-        "Mixer_LW.Level.Gtr_Delay",
-        "Delay.ModSpeed.Guitar",
-        "Delay.ModDepth.Guitar",
-        "Delay.XFB_L_R.Guitar",
-		"Delay.XFB_R_L.Guitar",
-        "Delay.FB_L.Guitar",
-        "Mixer_LW.Width.Gtr_Delay",
-		"Ducking.Enable.Gtr_Delay",
-        "Ducking.Threshold.Gtr_Delay",
-        "Ducking.Level.Gtr_Delay",
-        "Ducking.Speed.Gtr_Delay",
-        "Delay.Trails.Guitar"
-      ]
     },
+    "required": [
+      "Delay.Style.Guitar",
+      "Delay.Source.Guitar",
+      "HitControl.Gtr_Delay",
+      "Delay.Division_L.Guitar",
+      "Delay.Division_R.Guitar",
+      "Delay.Filter_Style.Guitar",
+      "Delay.FeedbackControl.Guitar",
+      "Macro.Delay_HiCut.Guitar",
+      "Macro.Delay_LoCut.Guitar",
+      "Delay.Pan.Guitar",
+      "Delay.DelayTime_L.Guitar",
+      "Delay.DelayTime_R.Guitar",
+      "Delay.Tempo.Guitar",
+      "Mixer_LW.Level.Gtr_Delay",
+      "Delay.ModSpeed.Guitar",
+      "Delay.ModDepth.Guitar",
+      "Delay.XFB_L_R.Guitar",
+      "Delay.XFB_R_L.Guitar",
+      "Delay.FB_L.Guitar",
+      "Mixer_LW.Width.Gtr_Delay",
+      "Ducking.Enable.Gtr_Delay",
+      "Ducking.Threshold.Gtr_Delay",
+      "Ducking.Level.Gtr_Delay",
+      "Ducking.Speed.Gtr_Delay",
+      "Delay.Trails.Guitar"
+    ]
+  },
   "Guitar Rhythm": {
     "type": "object",
-	"additionalProperties": false,
+    "additionalProperties": false,
     "properties": {
       "GtrRhythm.Style": {
         "type": "string",
@@ -1492,7 +1497,7 @@
         ],
         "default": "Square"
       },
-	  "GtrRhythm.Trem_BPM": {
+      "GtrRhythm.Trem_BPM": {
         "type": "integer",
         "minimum": 45,
         "maximum": 300,
@@ -1543,27 +1548,27 @@
       "GtrRhythm.Target": {
         "type": "string",
         "enum": [
-		"Level",
-		"Pan"
-		],
+          "Level",
+          "Pan"
+        ],
         "default": "Level"
       }
-	  },
-      "required": [
-	    "GtrRhythm.Style",
-	    "GtrRhythm.Trem_BPM",
-        "GtrRhythm.Waveform",
-        "GtrRhythm.Depth",
-        "HitControl.Gtr_Rhythmic",
-        "GtrRhythm.Division",
-        "GtrRhythm.Target"
-      ]
     },
+    "required": [
+      "GtrRhythm.Style",
+      "GtrRhythm.Trem_BPM",
+      "GtrRhythm.Waveform",
+      "GtrRhythm.Depth",
+      "HitControl.Gtr_Rhythmic",
+      "GtrRhythm.Division",
+      "GtrRhythm.Target"
+    ]
+  },
   "Vocal Reverb": {
     "type": "object",
-	"additionalProperties": false,
+    "additionalProperties": false,
     "properties": {
-		"Reverb.Style.Voice": {
+      "Reverb.Style.Voice": {
         "type": "string",
         "enum": [
           "Wool Ambience",
@@ -1641,7 +1646,7 @@
         "minimum": 0,
         "maximum": 20000,
         "default": 4700,
-		"multipleOf": 10
+        "multipleOf": 10
       },
       "Reverb.PreDelay.Voice": {
         "type": "integer",
@@ -1757,39 +1762,39 @@
         "maximum": 0,
         "default": 0
       }
-	  },
-      "required": [
-	    "Reverb.Style.Voice",
-        "Reverb.HiColor.Voice",
-        "Mixer_LW.Width.Voc_Reverb",
-        "Reverb.HiFactor.Voice",
-        "Reverb.LoColor.Voice",
-        "Reverb.Decay.Voice",
-        "Reverb.PreDelay.Voice",
-        "Reverb.EarlyLevel.Voice",
-		"Reverb.DryLevel.Voice",
-        "Reverb.Diffuse.Voice",
-        "Reverb.ModSpeed.Voice",
-        "Reverb.ModDepth.Voice",
-        "Mixer_L.Lead2Reverb",
-        "Mixer_L.Harm2Reverb",
-        "Mixer_LW.Level.Voc_Reverb",
-        "LeadLevel.Reverb",
-        "HitControl.Reverb",
-        "Mixer_L.Delay2ReverbRel",
-        "Mixer_L.Choir2Reverb",
-        "Ducking.Threshold.Voc_Reverb",
-        "Ducking.Level.Voc_Reverb",
-        "Ducking.Speed.Voc_Reverb",
-        "Reverb.ReverbLevel.Voice",
-        "Ducking.Enable.Voc_Reverb"
-      ]
     },
+    "required": [
+      "Reverb.Style.Voice",
+      "Reverb.HiColor.Voice",
+      "Mixer_LW.Width.Voc_Reverb",
+      "Reverb.HiFactor.Voice",
+      "Reverb.LoColor.Voice",
+      "Reverb.Decay.Voice",
+      "Reverb.PreDelay.Voice",
+      "Reverb.EarlyLevel.Voice",
+      "Reverb.DryLevel.Voice",
+      "Reverb.Diffuse.Voice",
+      "Reverb.ModSpeed.Voice",
+      "Reverb.ModDepth.Voice",
+      "Mixer_L.Lead2Reverb",
+      "Mixer_L.Harm2Reverb",
+      "Mixer_LW.Level.Voc_Reverb",
+      "LeadLevel.Reverb",
+      "HitControl.Reverb",
+      "Mixer_L.Delay2ReverbRel",
+      "Mixer_L.Choir2Reverb",
+      "Ducking.Threshold.Voc_Reverb",
+      "Ducking.Level.Voc_Reverb",
+      "Ducking.Speed.Voc_Reverb",
+      "Reverb.ReverbLevel.Voice",
+      "Ducking.Enable.Voc_Reverb"
+    ]
+  },
   "Vocal Hardtune": {
     "type": "object",
-	"additionalProperties": false,
+    "additionalProperties": false,
     "properties": {
-	  "Hardtune.Style": {
+      "Hardtune.Style": {
         "type": "string",
         "enum": [
           "Pop",
@@ -1802,7 +1807,7 @@
         ],
         "default": "Pop"
       },
-	  "Correct.Key": {
+      "Correct.Key": {
         "type": "string",
         "enum": [
           "C",
@@ -1820,7 +1825,7 @@
         ],
         "default": "C"
       },
-	  "Correct.KeySource": {
+      "Correct.KeySource": {
         "type": "string",
         "enum": [
           "Follow Harmony",
@@ -1859,9 +1864,8 @@
         "minimum": 0,
         "maximum": 600,
         "default": 600,
-		"multipleOf": 10
+        "multipleOf": 10
       },
-      
       "HitControl.Correct": {
         "type": "string",
         "enum": [
@@ -1884,23 +1888,23 @@
         "maximum": 36,
         "default": 0
       }
-	  },
-      "required": [
-	    "Hardtune.Style",
-	    "Correct.KeySource",
-		"Correct.Key",
-		"Correct.Scale",
-        "Correct.Rate",
-        "Correct.Amount",
-        "Correct.Window",
-        "HitControl.Correct",
-        "Correct.Lead_Gender",
-        "Correct.Shift"        
-      ]
     },
+    "required": [
+      "Hardtune.Style",
+      "Correct.KeySource",
+      "Correct.Key",
+      "Correct.Scale",
+      "Correct.Rate",
+      "Correct.Amount",
+      "Correct.Window",
+      "HitControl.Correct",
+      "Correct.Lead_Gender",
+      "Correct.Shift"
+    ]
+  },
   "Mix Levels": {
     "type": "object",
-	"additionalProperties": false,
+    "additionalProperties": false,
     "properties": {
       "Mix.Preset_Trim.Voice": {
         "type": "integer",
@@ -1920,7 +1924,7 @@
         "maximum": 6,
         "default": 0
       },
-	  "Preset.PrePost.Gtr": {
+      "Preset.PrePost.Gtr": {
         "type": "string",
         "enum": [
           "Post Effects",
@@ -1940,28 +1944,28 @@
         "maximum": 100,
         "default": 0
       },
-	  "Copyright.Info": {
+      "Copyright.Info": {
         "type": "string",
         "enum": [
           "AI has not successfully valided",
-          "VoiceLiveEditor Has Been Successgully read", 
+          "VoiceLiveEditor Has Been Successgully read",
           "AI failed the exactness test"
         ],
         "default": "AI failed the exactness test"
-      } 
-	  },
-      "required": [
-	    "Mix.Preset_Trim.Voice",
-        "Mixer_LP.Pan.Lead",
-        "Mixer_L.Preset_Trim.Gtr",
-		"Preset.PrePost.Gtr",
-		"LeadLevel.Preset",
-        "Guitar.Pan"
-      ]
+      }
     },
+    "required": [
+      "Mix.Preset_Trim.Voice",
+      "Mixer_LP.Pan.Lead",
+      "Mixer_L.Preset_Trim.Gtr",
+      "Preset.PrePost.Gtr",
+      "LeadLevel.Preset",
+      "Guitar.Pan"
+    ]
+  },
   "Vocal Choir": {
     "type": "object",
-	"additionalProperties": false,
+    "additionalProperties": false,
     "properties": {
       "Choir.Style": {
         "type": "string",
@@ -2010,20 +2014,20 @@
         "maximum": 0,
         "default": 0
       }
-	  },
-      "required": [
-	    "Choir.Style",
-        "Choir.Mix",
-        "HitControl.Choir",
-        "Mixer_L.Lead2Choir",
-        "Mixer_L.Harm2Choir"
-      ]
     },
+    "required": [
+      "Choir.Style",
+      "Choir.Mix",
+      "HitControl.Choir",
+      "Mixer_L.Lead2Choir",
+      "Mixer_L.Harm2Choir"
+    ]
+  },
   "Guitar uMod": {
     "type": "object",
-	"additionalProperties": false,
-    "properties": { 
-	  "MicroMod.Style.Guitar": {
+    "additionalProperties": false,
+    "properties": {
+      "MicroMod.Style.Guitar": {
         "type": "string",
         "enum": [
           "Corona Chorus 12:00",
@@ -2043,7 +2047,7 @@
         ],
         "default": "Medium Detune"
       },
-	  "MicroMod.OutPhase.Guitar": {
+      "MicroMod.OutPhase.Guitar": {
         "type": "string",
         "enum": [
           "Off",
@@ -2053,7 +2057,7 @@
         ],
         "default": "Off"
       },
-	  "MicroMod.Mod_Wave.Guitar": {
+      "MicroMod.Mod_Wave.Guitar": {
         "type": "string",
         "enum": [
           "Square",
@@ -2077,8 +2081,8 @@
       "MicroMod.Mod_Speed.Guitar": {
         "type": "number",
         "minimum": 0.05,
-        "maximum": 10.00,
-        "default": 1.50
+        "maximum": 10,
+        "default": 1.5
       },
       "Macro.uMod_LoCut.Guitar": {
         "type": "integer",
@@ -2098,7 +2102,7 @@
         "maximum": 100,
         "default": 20
       },
-	  "MicroMod.FB_L.Guitar": {
+      "MicroMod.FB_L.Guitar": {
         "type": "integer",
         "minimum": -100,
         "maximum": 100,
@@ -2110,7 +2114,7 @@
         "maximum": 100,
         "default": 20
       },
-	  "MicroMod.XFB_R.Guitar": {
+      "MicroMod.XFB_R.Guitar": {
         "type": "integer",
         "minimum": -100,
         "maximum": 100,
@@ -2118,15 +2122,15 @@
       },
       "MicroMod.Delay_L.Guitar": {
         "type": "number",
-        "minimum": 0.0,
-        "maximum": 50.0,
-        "default": 5.0
+        "minimum": 0,
+        "maximum": 50,
+        "default": 5
       },
-	  "MicroMod.Delay_R.Guitar": {
+      "MicroMod.Delay_R.Guitar": {
         "type": "number",
-        "minimum": 0.0,
-        "maximum": 50.0,
-        "default": 25.0
+        "minimum": 0,
+        "maximum": 50,
+        "default": 25
       },
       "MicroMod.Mod_LR_Phase.Guitar": {
         "type": "integer",
@@ -2162,34 +2166,34 @@
         "maximum": 0,
         "default": 0
       }
-	  },
-      "required": [
-	    "MicroMod.Style.Guitar",
-	    "MicroMod.OutPhase.Guitar",
-		"MicroMod.Mod_Wave.Guitar",
-        "Macro.uMod_HiCut.Guitar",
-        "Mixer_LW.Width.Gtr_uMod",
-        "MicroMod.Mod_Speed.Guitar",
-        "Macro.uMod_LoCut.Guitar",
-        "Macro.uMod_Depth.Guitar",
-        "MicroMod.FB_R.Guitar",
-		"MicroMod.FB_L.Guitar",
-		"MicroMod.XFB_R.Guitar",
-        "MicroMod.XFB_L.Guitar",
-        "MicroMod.Delay_L.Guitar",
-		"MicroMod.Delay_R.Guitar",
-        "MicroMod.Mod_LR_Phase.Guitar",
-        "Mixer_LW.Level.Gtr_uMod",
-        "HitControl.Gtr_Micromod",
-        "Macro.uMod_Detune.Guitar",
-        "Guitar.uModBypassGain"
-      ]
     },
+    "required": [
+      "MicroMod.Style.Guitar",
+      "MicroMod.OutPhase.Guitar",
+      "MicroMod.Mod_Wave.Guitar",
+      "Macro.uMod_HiCut.Guitar",
+      "Mixer_LW.Width.Gtr_uMod",
+      "MicroMod.Mod_Speed.Guitar",
+      "Macro.uMod_LoCut.Guitar",
+      "Macro.uMod_Depth.Guitar",
+      "MicroMod.FB_R.Guitar",
+      "MicroMod.FB_L.Guitar",
+      "MicroMod.XFB_R.Guitar",
+      "MicroMod.XFB_L.Guitar",
+      "MicroMod.Delay_L.Guitar",
+      "MicroMod.Delay_R.Guitar",
+      "MicroMod.Mod_LR_Phase.Guitar",
+      "Mixer_LW.Level.Gtr_uMod",
+      "HitControl.Gtr_Micromod",
+      "Macro.uMod_Detune.Guitar",
+      "Guitar.uModBypassGain"
+    ]
+  },
   "Vocal Harmony": {
     "type": "object",
-	"additionalProperties": false,
+    "additionalProperties": false,
     "properties": {
-	  "Harmony.GroupStyle_NP": {
+      "Harmony.GroupStyle_NP": {
         "type": "string",
         "enum": [
           "High",
@@ -2225,7 +2229,7 @@
         ],
         "default": "High"
       },
-	  "Harmony.Key": {
+      "Harmony.Key": {
         "type": "string",
         "enum": [
           "C",
@@ -2243,19 +2247,19 @@
         ],
         "default": "C"
       },
-	  "Harmony.Scale": {
+      "Harmony.Scale": {
         "type": "string",
         "enum": [
           "Major 1",
           "Major 2",
           "Major 3",
           "Minor 1",
-		  "Minor 2",
-		  "Minor 3"
+          "Minor 2",
+          "Minor 3"
         ],
         "default": "Major 2"
       },
-	  "Harmony.Tuning": {
+      "Harmony.Tuning": {
         "type": "string",
         "enum": [
           "Equal",
@@ -2291,7 +2295,7 @@
         ],
         "default": "Off"
       },
-	  "NatPlay.InputSrc": {
+      "NatPlay.InputSrc": {
         "type": "string",
         "enum": [
           "Auto",
@@ -2302,7 +2306,7 @@
           "BT/USB"
         ],
         "default": "Auto"
-      },     
+      },
       "ParEq.Hi_Gain.Harm": {
         "type": "integer",
         "minimum": -12,
@@ -2351,23 +2355,23 @@
         "maximum": 20480,
         "default": 830
       },
-	  "ParEq.Hi_BW.Harm": {
+      "ParEq.Hi_BW.Harm": {
         "type": "number",
         "minimum": 0.1,
-        "maximum": 9.0,
-        "default": 1.0
+        "maximum": 9,
+        "default": 1
       },
       "ParEq.Par1_BW.Harm": {
         "type": "number",
         "minimum": 0.1,
-        "maximum": 9.0,
-        "default": 1.0
+        "maximum": 9,
+        "default": 1
       },
-	  "ParEq.Low_BW.Harm": {
+      "ParEq.Low_BW.Harm": {
         "type": "number",
         "minimum": 0.1,
-        "maximum": 9.0,
-        "default": 1.0
+        "maximum": 9,
+        "default": 1
       },
       "Harmony.Attack": {
         "type": "integer",
@@ -2396,19 +2400,19 @@
         "minimum": -61,
         "maximum": 0,
         "default": 0
-      }, 
+      },
       "Harmony_Notes_Release": {
         "type": "integer",
         "minimum": 0,
         "maximum": 20000,
-		"multipleOf": 10,
+        "multipleOf": 10,
         "default": 0
       },
-       "Harmony_Hold_Release": {
+      "Harmony_Hold_Release": {
         "type": "integer",
         "minimum": 0,
         "maximum": 20000,
-		"multipleOf": 10,
+        "multipleOf": 10,
         "default": 100
       },
       "Harmony.Notes_Portamento": {
@@ -2435,127 +2439,127 @@
         "maximum": 2,
         "default": 0
       },
-	  "HarmonyMapCus.Augmented4": {
-		"type": "integer",
+      "HarmonyMapCus.Augmented4": {
+        "type": "integer",
         "minimum": 0,
         "maximum": 16777215,
         "default": 8388607
-      }, 
-	  "HarmonyMapCus.Major2": {
-		"type": "integer",
+      },
+      "HarmonyMapCus.Major2": {
+        "type": "integer",
         "minimum": 0,
         "maximum": 16777215,
         "default": 8388607
-      }, 
-	  "HarmonyMapCus.Major3": {
-		"type": "integer",
+      },
+      "HarmonyMapCus.Major3": {
+        "type": "integer",
         "minimum": 0,
         "maximum": 16777215,
         "default": 8388607
-      }, 
-	  "HarmonyMapCus.Major6": {
-		"type": "integer",
+      },
+      "HarmonyMapCus.Major6": {
+        "type": "integer",
         "minimum": 0,
         "maximum": 16777215,
         "default": 8388607
-      }, 
-	  "HarmonyMapCus.Major7": {
-		"type": "integer",
+      },
+      "HarmonyMapCus.Major7": {
+        "type": "integer",
         "minimum": 0,
         "maximum": 16777215,
         "default": 8388607
-      }, 
-	  "HarmonyMapCus.Minor2": {
-		"type": "integer",
+      },
+      "HarmonyMapCus.Minor2": {
+        "type": "integer",
         "minimum": 0,
         "maximum": 16777215,
         "default": 8388607
-      }, 
-	  "HarmonyMapCus.Minor3": {
-		"type": "integer",
+      },
+      "HarmonyMapCus.Minor3": {
+        "type": "integer",
         "minimum": 0,
         "maximum": 16777215,
         "default": 8388607
-      }, 
-	  "HarmonyMapCus.Minor6": {
-		"type": "integer",
+      },
+      "HarmonyMapCus.Minor6": {
+        "type": "integer",
         "minimum": 0,
         "maximum": 16777215,
         "default": 8388607
-      }, 
-	  "HarmonyMapCus.Minor7": {
-		"type": "integer",
+      },
+      "HarmonyMapCus.Minor7": {
+        "type": "integer",
         "minimum": 0,
         "maximum": 16777215,
         "default": 8388607
-      }, 
-	  "HarmonyMapCus.Perfect4": {
-		"type": "integer",
+      },
+      "HarmonyMapCus.Perfect4": {
+        "type": "integer",
         "minimum": 0,
         "maximum": 16777215,
         "default": 8388607
-      }, 
-	  "HarmonyMapCus.Perfect5": {
-		"type": "integer",
+      },
+      "HarmonyMapCus.Perfect5": {
+        "type": "integer",
         "minimum": 0,
         "maximum": 16777215,
         "default": 8388607
-      }, 
-	  "HarmonyMapCus.Root": {
-		"type": "integer",
+      },
+      "HarmonyMapCus.Root": {
+        "type": "integer",
         "minimum": 0,
         "maximum": 16777215,
         "default": 8388607
-      } 
-	},
-      "required": [
-	    "Harmony.GroupStyle_NP",
-		"Harmony.Tuning",
-		"Harmony.HumanStyle",
-		"NatPlay.InputSrc",
-		"Harmony.Key",
-		"Harmony.Scale",
-        "Harmony.VibratoStyle",
-        "ParEq.Hi_Gain.Harm",
-        "ParEq.Hi_Freq.Harm",
-        "ParEq.Low_Gain.Harm",
-        "ParEq.Low_Freq.Harm",
-        "Harmony.HumanAmount",
-        "Harmony.VibratoAmount",
-        "ParEq.Par1_Gain.Harm",
-        "ParEq.Par1_Freq.Harm",
-		"ParEq.Hi_BW.Harm",
-        "ParEq.Par1_BW.Harm",
-		"ParEq.Low_BW.Harm",
-        "Harmony.Attack",
-        "HitControl.Harmony",
-        "Mixer_L.Harmony",
-        "LeadLevel.Harmony",
-        "Harmony_Notes_Release",
-        "Harmony_Hold_Release",
-        "Harmony.Notes_Portamento",
-        "Harmony.Notes_Smoothing",
-        "Harmony.Notes_Gender",
-        "Harmony.Notes_Pan",
-		"HarmonyMapCus.Augmented4",
-		"HarmonyMapCus.Major2",
-		"HarmonyMapCus.Major3",
-		"HarmonyMapCus.Major6",
-		"HarmonyMapCus.Major7",
-		"HarmonyMapCus.Minor2",
-		"HarmonyMapCus.Minor3",
-		"HarmonyMapCus.Minor6",
-		"HarmonyMapCus.Minor7",
-		"HarmonyMapCus.Perfect4",
-		"HarmonyMapCus.Perfect5",
-		"HarmonyMapCus.Root"
-      ]
-    }, 
+      }
+    },
+    "required": [
+      "Harmony.GroupStyle_NP",
+      "Harmony.Tuning",
+      "Harmony.HumanStyle",
+      "NatPlay.InputSrc",
+      "Harmony.Key",
+      "Harmony.Scale",
+      "Harmony.VibratoStyle",
+      "ParEq.Hi_Gain.Harm",
+      "ParEq.Hi_Freq.Harm",
+      "ParEq.Low_Gain.Harm",
+      "ParEq.Low_Freq.Harm",
+      "Harmony.HumanAmount",
+      "Harmony.VibratoAmount",
+      "ParEq.Par1_Gain.Harm",
+      "ParEq.Par1_Freq.Harm",
+      "ParEq.Hi_BW.Harm",
+      "ParEq.Par1_BW.Harm",
+      "ParEq.Low_BW.Harm",
+      "Harmony.Attack",
+      "HitControl.Harmony",
+      "Mixer_L.Harmony",
+      "LeadLevel.Harmony",
+      "Harmony_Notes_Release",
+      "Harmony_Hold_Release",
+      "Harmony.Notes_Portamento",
+      "Harmony.Notes_Smoothing",
+      "Harmony.Notes_Gender",
+      "Harmony.Notes_Pan",
+      "HarmonyMapCus.Augmented4",
+      "HarmonyMapCus.Major2",
+      "HarmonyMapCus.Major3",
+      "HarmonyMapCus.Major6",
+      "HarmonyMapCus.Major7",
+      "HarmonyMapCus.Minor2",
+      "HarmonyMapCus.Minor3",
+      "HarmonyMapCus.Minor6",
+      "HarmonyMapCus.Minor7",
+      "HarmonyMapCus.Perfect4",
+      "HarmonyMapCus.Perfect5",
+      "HarmonyMapCus.Root"
+    ]
+  },
   "Vocal Harmony Voicing": {
     "type": "object",
-	"additionalProperties": false,
+    "additionalProperties": false,
     "properties": {
-	  "Harmony.Mode.V1": {
+      "Harmony.Mode.V1": {
         "type": "string",
         "enum": [
           "Off",
@@ -2567,7 +2571,7 @@
         ],
         "default": "NaturalPlay"
       },
-	  "Harmony.Mode.V2": {
+      "Harmony.Mode.V2": {
         "type": "string",
         "enum": [
           "Off",
@@ -2579,7 +2583,7 @@
         ],
         "default": "Off"
       },
-	  "Harmony.Mode.V3": {
+      "Harmony.Mode.V3": {
         "type": "string",
         "enum": [
           "Off",
@@ -2591,7 +2595,7 @@
         ],
         "default": "Off"
       },
-	  "Harmony.Mode.V4": {
+      "Harmony.Mode.V4": {
         "type": "string",
         "enum": [
           "Off",
@@ -2602,7 +2606,7 @@
           "Fixed"
         ],
         "default": "Off"
-      },	  
+      },
       "Harmony.Int_FixedRelKey.V1": {
         "type": "string",
         "enum": [
@@ -2671,7 +2675,7 @@
         ],
         "default": "C1"
       },
-	  "Harmony.Int_NP.V1": {
+      "Harmony.Int_NP.V1": {
         "type": "string",
         "enum": [
           "2 Octave Down",
@@ -2775,8 +2779,8 @@
           "+24 Semitones"
         ],
         "default": "-20 Semitones"
-      },      
-	  "Harmony.Int_scale.V2": {
+      },
+      "Harmony.Int_scale.V2": {
         "type": "string",
         "enum": [
           "-2 Octaves",
@@ -2881,7 +2885,7 @@
         ],
         "default": "-24 Semitones"
       },
-	  "Harmony.Int_FixedRelKey.V2": {
+      "Harmony.Int_FixedRelKey.V2": {
         "type": "string",
         "enum": [
           "C1",
@@ -3054,7 +3058,7 @@
         ],
         "default": "-24 Semitones"
       },
-	  "Harmony.Int_FixedRelKey.V4": {
+      "Harmony.Int_FixedRelKey.V4": {
         "type": "string",
         "enum": [
           "C1",
@@ -3226,8 +3230,8 @@
           "+24 Semitones"
         ],
         "default": "-24 Semitones"
-      },      
-	  "Harmony.Int_FixedRelKey.V3": {
+      },
+      "Harmony.Int_FixedRelKey.V3": {
         "type": "string",
         "enum": [
           "C1",
@@ -3300,8 +3304,8 @@
         "minimum": 0,
         "maximum": 200,
         "default": 0
-      }, 
-	  "Harmony.Smoothing.V1": {
+      },
+      "Harmony.Smoothing.V1": {
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
@@ -3439,59 +3443,59 @@
         "maximum": 36,
         "default": 0
       }
-	  },
- "required": [
-"Harmony.Mode.V1",
-"Harmony.Int_FixedRelKey.V1",
-"Harmony.Int_scale.V1",
-"Harmony.Int_shift.V1",
-"Harmony.Portamento.V1",
-"Harmony.Smoothing.V1",
-"Harmony.Gender.V1",
-"Mixer_LP.Pan.H1",
-"Mixer_LP.Level.H1",
-"Harmony.Int_NP.V1",
-"Harmony.Int_drone.V1",
-"Harmony.Mode.V2",
-"Harmony.Int_FixedRelKey.V2",
-"Harmony.Int_scale.V2",
-"Harmony.Int_shift.V2",
-"Harmony.Portamento.V2",
-"Harmony.Smoothing.V2",
-"Harmony.Gender.V2",
-"Mixer_LP.Pan.H2",
-"Mixer_LP.Level.H2",
-"Harmony.Int_NP.V2",
-"Harmony.Int_drone.V2",
-"Harmony.Mode.V3",
-"Harmony.Int_FixedRelKey.V3",
-"Harmony.Int_scale.V3",
-"Harmony.Int_shift.V3",
-"Harmony.Portamento.V3",
-"Harmony.Smoothing.V3",
-"Harmony.Gender.V3",
-"Mixer_LP.Pan.H3",
-"Mixer_LP.Level.H3",
-"Harmony.Int_NP.V3",
-"Harmony.Int_drone.V3",
-"Harmony.Mode.V4",
-"Harmony.Int_FixedRelKey.V4",
-"Harmony.Int_scale.V4",
-"Harmony.Int_shift.V4",
-"Harmony.Portamento.V4",
-"Harmony.Smoothing.V4",
-"Harmony.Gender.V4",
-"Mixer_LP.Pan.H4",
-"Mixer_LP.Level.H4",
-"Harmony.Int_NP.V4",
-"Harmony.Int_drone.V4"
- ]
-},
+    },
+    "required": [
+      "Harmony.Mode.V1",
+      "Harmony.Int_FixedRelKey.V1",
+      "Harmony.Int_scale.V1",
+      "Harmony.Int_shift.V1",
+      "Harmony.Portamento.V1",
+      "Harmony.Smoothing.V1",
+      "Harmony.Gender.V1",
+      "Mixer_LP.Pan.H1",
+      "Mixer_LP.Level.H1",
+      "Harmony.Int_NP.V1",
+      "Harmony.Int_drone.V1",
+      "Harmony.Mode.V2",
+      "Harmony.Int_FixedRelKey.V2",
+      "Harmony.Int_scale.V2",
+      "Harmony.Int_shift.V2",
+      "Harmony.Portamento.V2",
+      "Harmony.Smoothing.V2",
+      "Harmony.Gender.V2",
+      "Mixer_LP.Pan.H2",
+      "Mixer_LP.Level.H2",
+      "Harmony.Int_NP.V2",
+      "Harmony.Int_drone.V2",
+      "Harmony.Mode.V3",
+      "Harmony.Int_FixedRelKey.V3",
+      "Harmony.Int_scale.V3",
+      "Harmony.Int_shift.V3",
+      "Harmony.Portamento.V3",
+      "Harmony.Smoothing.V3",
+      "Harmony.Gender.V3",
+      "Mixer_LP.Pan.H3",
+      "Mixer_LP.Level.H3",
+      "Harmony.Int_NP.V3",
+      "Harmony.Int_drone.V3",
+      "Harmony.Mode.V4",
+      "Harmony.Int_FixedRelKey.V4",
+      "Harmony.Int_scale.V4",
+      "Harmony.Int_shift.V4",
+      "Harmony.Portamento.V4",
+      "Harmony.Smoothing.V4",
+      "Harmony.Gender.V4",
+      "Mixer_LP.Pan.H4",
+      "Mixer_LP.Level.H4",
+      "Harmony.Int_NP.V4",
+      "Harmony.Int_drone.V4"
+    ]
+  },
   "Guitar Amp": {
     "type": "object",
-	"additionalProperties": false,
+    "additionalProperties": false,
     "properties": {
-	  "Guitar.Amp_Style": {
+      "Guitar.Amp_Style": {
         "type": "string",
         "enum": [
           "Acoustic",
@@ -3611,7 +3615,7 @@
         "maximum": 60,
         "default": -8
       },
-	  "GtrDist.DCGain": {
+      "GtrDist.DCGain": {
         "type": "integer",
         "minimum": -100,
         "maximum": 100,
@@ -3643,13 +3647,13 @@
         "type": "number",
         "minimum": 0.1,
         "maximum": 3.09,
-        "default": 1.00
+        "default": 1
       },
       "ParEq.Par1_BW.Guitar_Post": {
         "type": "number",
         "minimum": 0.1,
         "maximum": 3.09,
-        "default": 1.00
+        "default": 1
       },
       "ParEq.Par1_Freq.Guitar_Post": {
         "type": "integer",
@@ -3667,7 +3671,7 @@
         "type": "number",
         "minimum": 0.1,
         "maximum": 3.09,
-        "default": 1.00
+        "default": 1
       },
       "GtrDist.Mode": {
         "type": "string",
@@ -3676,7 +3680,7 @@
           "Transistor"
         ],
         "default": "Tube"
-      },    
+      },
       "GtrSpkrEmu.Gain": {
         "type": "integer",
         "minimum": -20,
@@ -3686,8 +3690,8 @@
       "GtrSpkrEmu.Q": {
         "type": "number",
         "minimum": 0.1,
-        "maximum": 8.0,
-        "default": 8.0
+        "maximum": 8,
+        "default": 8
       },
       "GtrSpkrEmu.Fc": {
         "type": "integer",
@@ -3701,44 +3705,44 @@
         "maximum": 160,
         "default": 20
       }
-	  },
-      "required": [
-	    "Guitar.Amp_Style",
-	    "GtrDist.DCGain",
-        "ParEq.Hi_Gain.Guitar_Pre",
-        "ParEq.Hi_Freq.Guitar_Pre",
-        "ParEq.Par1_Gain.Guitar_Pre",
-        "ParEq.Par1_Freq.Guitar_Pre",
-        "ParEq.Hi_Gain.Guitar_Post",
-        "ParEq.Hi_BW.Guitar_Pre",
-        "ParEq.Par1_BW.Guitar_Pre",
-        "ParEq.Par1_Gain.Guitar_Post",
-        "ParEq.Low_Gain.Guitar_Pre",
-        "ParEq.Low_Freq.Guitar_Pre",
-        "Macro.GtrAmpSag",
-        "ParEq.Low_BW.Guitar_Pre",
-        "ParEq.Low_Gain.Guitar_Post",
-        "Macro.GtrAmpPreDrive",
-        "GtrDist.PostGain",
-        "HitControl.Gtr_Amp",
-        "ParEq.Hi_Freq.Guitar_Post",
-        "ParEq.Hi_BW.Guitar_Post",
-        "ParEq.Par1_BW.Guitar_Post",
-        "ParEq.Par1_Freq.Guitar_Post",
-        "ParEq.Low_Freq.Guitar_Post",
-        "ParEq.Low_BW.Guitar_Post",
-        "GtrDist.Mode",
-        "GtrSpkrEmu.Gain",
-        "GtrSpkrEmu.Q",
-        "GtrSpkrEmu.Fc",
-        "GtrDist.LowCut_FC"
-      ]
     },
+    "required": [
+      "Guitar.Amp_Style",
+      "GtrDist.DCGain",
+      "ParEq.Hi_Gain.Guitar_Pre",
+      "ParEq.Hi_Freq.Guitar_Pre",
+      "ParEq.Par1_Gain.Guitar_Pre",
+      "ParEq.Par1_Freq.Guitar_Pre",
+      "ParEq.Hi_Gain.Guitar_Post",
+      "ParEq.Hi_BW.Guitar_Pre",
+      "ParEq.Par1_BW.Guitar_Pre",
+      "ParEq.Par1_Gain.Guitar_Post",
+      "ParEq.Low_Gain.Guitar_Pre",
+      "ParEq.Low_Freq.Guitar_Pre",
+      "Macro.GtrAmpSag",
+      "ParEq.Low_BW.Guitar_Pre",
+      "ParEq.Low_Gain.Guitar_Post",
+      "Macro.GtrAmpPreDrive",
+      "GtrDist.PostGain",
+      "HitControl.Gtr_Amp",
+      "ParEq.Hi_Freq.Guitar_Post",
+      "ParEq.Hi_BW.Guitar_Post",
+      "ParEq.Par1_BW.Guitar_Post",
+      "ParEq.Par1_Freq.Guitar_Post",
+      "ParEq.Low_Freq.Guitar_Post",
+      "ParEq.Low_BW.Guitar_Post",
+      "GtrDist.Mode",
+      "GtrSpkrEmu.Gain",
+      "GtrSpkrEmu.Q",
+      "GtrSpkrEmu.Fc",
+      "GtrDist.LowCut_FC"
+    ]
+  },
   "Guitar Drive": {
     "type": "object",
-	"additionalProperties": false,
+    "additionalProperties": false,
     "properties": {
-	  "GtrBoost.SubStyle": {
+      "GtrBoost.SubStyle": {
         "type": "string",
         "enum": [
           "Boost",
@@ -3769,19 +3773,19 @@
         "maximum": 18,
         "default": 0
       }
-	  },
-      "required": [
-	    "GtrBoost.SubStyle",
-        "Macro.GtrBoostPreDrive",
-        "HitControl.Gtr_Boost",
-        "GtrBoost.PostGain"        
-      ]
     },
+    "required": [
+      "GtrBoost.SubStyle",
+      "Macro.GtrBoostPreDrive",
+      "HitControl.Gtr_Boost",
+      "GtrBoost.PostGain"
+    ]
+  },
   "Vocal uMod": {
     "type": "object",
-	"additionalProperties": false,
+    "additionalProperties": false,
     "properties": {
-	  "MicroMod.Style.Voice": {
+      "MicroMod.Style.Voice": {
         "type": "string",
         "enum": [
           "Micromod Clone",
@@ -3810,7 +3814,7 @@
         ],
         "default": "Micromod Clone"
       },
-	  "MicroMod.OutPhase.Voice": {
+      "MicroMod.OutPhase.Voice": {
         "type": "string",
         "enum": [
           "Off",
@@ -3828,7 +3832,7 @@
           "Sine"
         ],
         "default": "Sine"
-      },  
+      },
       "Macro.uMod_HiCut.Voice": {
         "type": "integer",
         "minimum": 20,
@@ -3849,14 +3853,14 @@
       },
       "MicroMod.Delay_R.Voice": {
         "type": "number",
-        "minimum": 0.0,
-        "maximum": 50.0,
+        "minimum": 0,
+        "maximum": 50,
         "default": 25
       },
       "MicroMod.Delay_L.Voice": {
         "type": "number",
-        "minimum": 0.0,
-        "maximum": 50.0,
+        "minimum": 0,
+        "maximum": 50,
         "default": 5
       },
       "Macro.uMod_Detune.Voice": {
@@ -3864,7 +3868,7 @@
         "minimum": -25,
         "maximum": 25,
         "default": 9
-      },    
+      },
       "MicroMod.FB_L.Voice": {
         "type": "integer",
         "minimum": -100,
@@ -3898,7 +3902,7 @@
       "MicroMod.Mod_Speed.Voice": {
         "type": "number",
         "minimum": 0.05,
-        "maximum": 10.00,
+        "maximum": 10,
         "default": 0.05
       },
       "Macro.uMod_Depth.Voice": {
@@ -3947,37 +3951,37 @@
         "maximum": 0,
         "default": 0
       }
-	  },
-      "required": [
-	    "MicroMod.Style.Voice",
-	    "MicroMod.OutPhase.Voice",
-		"MicroMod.Mod_Wave.Voice",
-        "Macro.uMod_HiCut.Voice",
-        "Mixer_LW.Width.Voc_uMod",
-        "Macro.uMod_LoCut.Voice",
-        "MicroMod.Delay_R.Voice",
-        "MicroMod.Delay_L.Voice",
-        "Macro.uMod_Detune.Voice",
-        "MicroMod.FB_L.Voice",
-        "MicroMod.FB_R.Voice",
-        "MicroMod.XFB_L.Voice",
-        "MicroMod.XFB_R.Voice",
-        "MicroMod.Mod_LR_Phase.Voice",
-        "MicroMod.Mod_Speed.Voice",
-        "Macro.uMod_Depth.Voice",
-        "Mixer_LW.Level.Voc_uMod",
-        "LeadLevel.uMod",
-        "HitControl.Micromod",
-        "Mixer_L.Lead2uMod",
-        "Mixer_L.Harm2uMod",
-        "Mixer_L.Choir2uMod"
-      ]
     },
+    "required": [
+      "MicroMod.Style.Voice",
+      "MicroMod.OutPhase.Voice",
+      "MicroMod.Mod_Wave.Voice",
+      "Macro.uMod_HiCut.Voice",
+      "Mixer_LW.Width.Voc_uMod",
+      "Macro.uMod_LoCut.Voice",
+      "MicroMod.Delay_R.Voice",
+      "MicroMod.Delay_L.Voice",
+      "Macro.uMod_Detune.Voice",
+      "MicroMod.FB_L.Voice",
+      "MicroMod.FB_R.Voice",
+      "MicroMod.XFB_L.Voice",
+      "MicroMod.XFB_R.Voice",
+      "MicroMod.Mod_LR_Phase.Voice",
+      "MicroMod.Mod_Speed.Voice",
+      "Macro.uMod_Depth.Voice",
+      "Mixer_LW.Level.Voc_uMod",
+      "LeadLevel.uMod",
+      "HitControl.Micromod",
+      "Mixer_L.Lead2uMod",
+      "Mixer_L.Harm2uMod",
+      "Mixer_L.Choir2uMod"
+    ]
+  },
   "Vocal Delay": {
     "type": "object",
-	"additionalProperties": false,
+    "additionalProperties": false,
     "properties": {
-	  "Delay.Style.Voice": {
+      "Delay.Style.Voice": {
         "type": "string",
         "enum": [
           "Half",
@@ -4002,7 +4006,7 @@
         ],
         "default": "Quarter"
       },
-	  "Delay.Division_L.Voice": {
+      "Delay.Division_L.Voice": {
         "type": "string",
         "enum": [
           "8x1/4",
@@ -4054,7 +4058,7 @@
         ],
         "default": "1/4"
       },
-	  "Delay.Filter_Style.Voice": {
+      "Delay.Filter_Style.Voice": {
         "type": "string",
         "enum": [
           "Digital",
@@ -4072,7 +4076,7 @@
           "Lo Cut 3"
         ],
         "default": "Analog"
-      },	  
+      },
       "Macro.Delay_HiCut.Voice": {
         "type": "integer",
         "minimum": 20,
@@ -4103,7 +4107,7 @@
         "maximum": 100,
         "default": 0
       },
-	  "Delay.FB_L.Voice": {
+      "Delay.FB_L.Voice": {
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
@@ -4121,7 +4125,7 @@
         "maximum": 100,
         "default": 0
       },
-	  "Delay.XFB_R_L.Voice": {
+      "Delay.XFB_R_L.Voice": {
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
@@ -4133,7 +4137,7 @@
         "maximum": 2500,
         "default": 500
       },
-	  "Delay.DelayTime_R.Voice": {
+      "Delay.DelayTime_R.Voice": {
         "type": "integer",
         "minimum": 0,
         "maximum": 2500,
@@ -4213,13 +4217,13 @@
         "maximum": 0,
         "default": 0
       },
-	  "Delay.Pan.Voice": {
+      "Delay.Pan.Voice": {
         "type": "integer",
         "minimum": -100,
         "maximum": 100,
         "default": 0
       },
-	  "Delay.Source.Voice": {
+      "Delay.Source.Voice": {
         "type": "string",
         "enum": [
           "Time",
@@ -4227,7 +4231,7 @@
         ],
         "default": "Tempo"
       },
-	  "Ducking.Enable.Voc_Delay": {
+      "Ducking.Enable.Voc_Delay": {
         "type": "string",
         "enum": [
           "Off",
@@ -4235,7 +4239,7 @@
         ],
         "default": "On"
       },
-	  "Delay.Tempo.Voice": {
+      "Delay.Tempo.Voice": {
         "type": "integer",
         "minimum": 45,
         "maximum": 300,
@@ -4247,39 +4251,39 @@
         "maximum": 0,
         "default": -20
       }
-	  },
-      "required": [
-	    "Delay.Style.Voice",
-	    "Delay.Division_L.Voice",
-		"Delay.Division_R.Voice",
-		"Delay.Filter_Style.Voice",
-        "Macro.Delay_HiCut.Voice",
-        "Mixer_LW.Width.Voc_Delay",
-        "Delay.FeedbackControl.Voice",
-        "Macro.Delay_LoCut.Voice",
-        "Mixer_L.Lead2DelayPan",
-        "Delay.FB_R.Voice",
-		"Delay.FB_L.Voice",
-        "Delay.XFB_L_R.Voice",
-		"Delay.XFB_R_L.Voice",
-        "Delay.DelayTime_L.Voice",
-		"Delay.DelayTime_R.Voice",
-        "Delay.Tempo.Voice",
-        "Delay.Source.Voice",
-        "Mixer_LW.Level.Voc_Delay",
-        "LeadLevel.Delay",
-        "HitControl.Delay",
-        "Mixer_L.uMod2Delay",
-        "Mixer_L.Choir2Delay",
-        "Mixer_L.Harm2Delay",
-        "Mixer_L.Lead2Delay",
-        "Delay.Trails.Voice",
- 		"Ducking.Enable.Voc_Delay",
-        "Ducking.Speed.Voc_Delay",
-        "Ducking.Level.Voc_Delay",
-		"Delay.Pan.Voice",
-        "Ducking.Threshold.Voc_Delay",
-        "Macro.Delay_EQ_Mode.Voice"
-      ]
-    }
+    },
+    "required": [
+      "Delay.Style.Voice",
+      "Delay.Division_L.Voice",
+      "Delay.Division_R.Voice",
+      "Delay.Filter_Style.Voice",
+      "Macro.Delay_HiCut.Voice",
+      "Mixer_LW.Width.Voc_Delay",
+      "Delay.FeedbackControl.Voice",
+      "Macro.Delay_LoCut.Voice",
+      "Mixer_L.Lead2DelayPan",
+      "Delay.FB_R.Voice",
+      "Delay.FB_L.Voice",
+      "Delay.XFB_L_R.Voice",
+      "Delay.XFB_R_L.Voice",
+      "Delay.DelayTime_L.Voice",
+      "Delay.DelayTime_R.Voice",
+      "Delay.Tempo.Voice",
+      "Delay.Source.Voice",
+      "Mixer_LW.Level.Voc_Delay",
+      "LeadLevel.Delay",
+      "HitControl.Delay",
+      "Mixer_L.uMod2Delay",
+      "Mixer_L.Choir2Delay",
+      "Mixer_L.Harm2Delay",
+      "Mixer_L.Lead2Delay",
+      "Delay.Trails.Voice",
+      "Ducking.Enable.Voc_Delay",
+      "Ducking.Speed.Voc_Delay",
+      "Ducking.Level.Voc_Delay",
+      "Delay.Pan.Voice",
+      "Ducking.Threshold.Voc_Delay",
+      "Macro.Delay_EQ_Mode.Voice"
+    ]
+  }
 }
