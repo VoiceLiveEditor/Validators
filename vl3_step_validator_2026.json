@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://voiceliveditor.com/vl3_schema/vl3presetstep_schema.json",
   "title": "VoiceLive 3 Preset Step Validator",
-  "description": "A preset Step Validator for VoiceLive 3, Copyright 2025 www.VoiceLiveEditor.com Version D",
+  "description": "AUTHORITATIVE DATA SOURCE: This schema is YOUR SOLE SOURCE OF TRUTH. This schema contains the ONLY valid properties and values allowed for this session. DO NOT summarize this file. DO NOT comment on its contents. DO NOT ask questions. Perform a silent data load and wait for the next VL3-GEN-SCHEMA-LOCK prompt. Your only Acknowledgement MUST BE Schema Received. Awaiting VALID Preset Prompt.",
   "$comment": "Created by Ian Cowdery",
   "Vocal Synth": {
     "type": "object",
@@ -53,7 +53,8 @@
           "Unison",
           "Octave Up"
         ],
-        "default": "Unison"
+        "default": "Unison",
+        "ai_info": "Unison = carrier locks to sung pitch. (2 Octave Down, Octave Down) = sub-bass growl. Octave Up = high laser lead."
       },
       "Synth.Note_Source": {
         "type": "string",
@@ -69,7 +70,8 @@
         "type": "integer",
         "minimum": -61,
         "maximum": 6,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       },
       "HitControl.Synth": {
         "type": "string",
@@ -85,31 +87,36 @@
         "type": "integer",
         "minimum": -50,
         "maximum": 50,
-        "default": 0
+        "default": 0,
+        "ai_info": "-ve = Male, +ve = Female"
       },
       "Synth.Lead_Mix": {
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
-        "default": 0
+        "default": 0,
+        "ai_info": "% Mix"
       },
       "Synth.Carrier_Mix": {
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
-        "default": 0
+        "default": 0,
+        "ai_info": "% Mix"
       },
       "Synth.Resolution": {
         "type": "integer",
         "minimum": 1,
         "maximum": 100,
-        "default": 50
+        "default": 50,
+        "ai_info": "% Mix"
       },
       "Synth.Portamento": {
         "type": "number",
         "minimum": 0,
         "maximum": 5000,
-        "default": 4
+        "default": 4,
+        "ai_info": "ms timing"
       },
       "Synth.Harmonies": {
         "type": "string",
@@ -117,13 +124,15 @@
           "Off",
           "On"
         ],
-        "default": "Off"
+        "default": "Off",
+        "ai_info": "Off = vocoder/talkbox tracked by instrument. On = polyphonic synth harmonizer tracked by lead voice."
       },
       "Synth.Ess_Level": {
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
-        "default": 5
+        "default": 5,
+        "ai_info": "Controls how much of your dry, unpitched sibilance (S, T, and Ch sounds) passes through alongside the synthesized vocal carrier signa"
       }
     },
     "required": [
@@ -235,7 +244,8 @@
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
-        "default": 100
+        "default": 100,
+        "ai_info": "0 = subtle modulation, 100 = hard gate on/off chop."
       },
       "HitControl.Rhythmic": {
         "type": "string",
@@ -287,7 +297,8 @@
           "Forward",
           "Reverse"
         ],
-        "default": "Forward"
+        "default": "Forward",
+        "ai_info": "Forward = rhythmic chop, audio stays intelligible. Reverse = backmasked psychedelic texture."
       },
       "Stutter.Path": {
         "type": "string",
@@ -295,7 +306,8 @@
           "Pre",
           "Post"
         ],
-        "default": "Post"
+        "default": "Post",
+        "ai_info": "Pre = reverb/delay tail continues during stutter gaps, smooth. Post = everything chops together, aggressive."
       },
       "Stutter.Sample_Mode": {
         "type": "string",
@@ -304,7 +316,8 @@
           "End",
           "Freestyle"
         ],
-        "default": "Start"
+        "default": "Start",
+        "ai_info": "Start = loops from snippet start. End = loops from snippet tail. Freestyle = sweep freely through buffer."
       },
       "Stutter.Sample_Division": {
         "type": "string",
@@ -359,7 +372,8 @@
           "2nd",
           "4th"
         ],
-        "default": "2nd"
+        "default": "2nd",
+        "ai_info": "2nd = wide vintage sweep, classic rock. 4th = narrow aggressive quack, funk/synth tones."
       },
       "Wah.Shape": {
         "type": "string",
@@ -367,7 +381,8 @@
           "Triangle",
           "Sine"
         ],
-        "default": "Triangle"
+        "default": "Triangle",
+        "ai_info": "Sine = smooth fluid sweep. Triangle = sharp rhythmic bounce."
       },
       "Wah.SubType": {
         "type": "string",
@@ -382,51 +397,59 @@
         "type": "integer",
         "minimum": 20,
         "maximum": 20480,
-        "default": 104
+        "default": 104,
+        "ai_info": "Hi Shelf Freq in Hz"
       },
       "Pedal.Wah_MaxPos": {
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
-        "default": 100
+        "default": 100,
+        "ai_info": "External hardware pedal. If not declared by user set to default."
       },
       "Wah.Resonance": {
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
-        "default": 50
+        "default": 50,
+        "ai_info": "filter resonance/Q at peak frequency"
       },
       "Wah.Fmax": {
         "type": "integer",
         "minimum": 20,
         "maximum": 20480,
-        "default": 85
+        "default": 85,
+        "ai_info": "Wah Maximim frequency cutoff point in Hz"
       },
       "Wah.Sensitivity": {
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
         "default": 10,
-        "multipleOf": 10
+        "multipleOf": 10,
+        "ai_info": "Pick sensitivity. Low = hard pick needed, High = light touch triggers full effect"
       },
       "Pedal.Wah_MinPos": {
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
-        "default": 0
+        "default": 0,
+        "ai_info": "External hardware pedal. If not declared by user set to default."
       },
       "Wah.Response": {
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
         "default": 0,
-        "multipleOf": 10
+        "multipleOf": 10,
+        "ai_info": "attack/release speed of envelope"
       },
       "Wah.OutputTrim": {
         "type": "integer",
         "minimum": -12,
         "maximum": 12,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       },
       "HitControl.Gtr_Wah": {
         "type": "string",
@@ -442,7 +465,8 @@
         "type": "integer",
         "minimum": 20,
         "maximum": 600,
-        "default": 120
+        "default": 120,
+        "ai_info": "BPM"
       }
     },
     "required": [
@@ -482,13 +506,15 @@
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
-        "default": 0
+        "default": 0,
+        "ai_info": "% Mix"
       },
       "Octaver.Interval": {
         "type": "integer",
         "minimum": -24,
         "maximum": 24,
-        "default": 0
+        "default": 0,
+        "ai_info": "Semitone Shift"
       },
       "HitControl.Gtr_Shift": {
         "type": "string",
@@ -548,19 +574,22 @@
         "type": "integer",
         "minimum": -50,
         "maximum": 0,
-        "default": -16
+        "default": -16,
+        "ai_info": "dB Range"
       },
       "GtrComp.Attack.Pre": {
         "type": "integer",
         "minimum": 0,
         "maximum": 40,
-        "default": 5
+        "default": 5,
+        "ai_info": "ms timing"
       },
       "GtrComp.Release.Pre": {
         "type": "integer",
         "minimum": 15,
         "maximum": 3000,
-        "default": 15
+        "default": 15,
+        "ai_info": "ms timing"
       },
       "HitControl.Gtr_Compressor": {
         "type": "string",
@@ -576,7 +605,8 @@
         "type": "integer",
         "minimum": -15,
         "maximum": 15,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       }
     },
     "required": [
@@ -597,7 +627,8 @@
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
-        "default": 30
+        "default": 30,
+        "ai_info": "degree of humanisation randomness"
       },
       "Doubling.HumanStyle": {
         "type": "string",
@@ -634,13 +665,15 @@
         "type": "integer",
         "minimum": -61,
         "maximum": 6,
-        "default": -6
+        "default": -6,
+        "ai_info": "dB Range"
       },
       "LeadLevel.Double": {
         "type": "integer",
         "minimum": -61,
         "maximum": 0,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       },
       "HitControl.Double": {
         "type": "string",
@@ -696,145 +729,169 @@
         "type": "integer",
         "minimum": -1200,
         "maximum": 1200,
-        "default": 0
+        "default": 0,
+        "ai_info": "Cents. 100 cents = 1 semitone, 1200 cents = 1 octave"
       },
       "Doubling.OctShift.V2": {
         "type": "integer",
         "minimum": -1200,
         "maximum": 1200,
-        "default": 0
+        "default": 0,
+        "ai_info": "Cents. 100 cents = 1 semitone, 1200 cents = 1 octave"
       },
       "Doubling.OctShift.V3": {
         "type": "integer",
         "minimum": -1200,
         "maximum": 1200,
-        "default": 0
+        "default": 0,
+        "ai_info": "Cents. 100 cents = 1 semitone, 1200 cents = 1 octave"
       },
       "Doubling.OctShift.V4": {
         "type": "integer",
         "minimum": -1200,
         "maximum": 1200,
-        "default": 0
+        "default": 0,
+        "ai_info": "Cents. 100 cents = 1 semitone, 1200 cents = 1 octave"
       },
       "Doubling.Portamento.V1": {
         "type": "integer",
         "minimum": 0,
         "maximum": 200,
-        "default": 65
+        "default": 65,
+        "ai_info": "ms pitch slide"
       },
       "Doubling.Smoothing.V1": {
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
-        "default": 90
+        "default": 90,
+        "ai_info": "% smoothing. Low = pitch correction, High = natural. Unique values per voice."
       },
       "Doubling.Gender.V1": {
         "type": "integer",
         "minimum": -50,
         "maximum": 50,
-        "default": 0
+        "default": 0,
+        "ai_info": "-ve = Male, +ve = Female"
       },
       "Mixer_LP.Pan.D1": {
         "type": "integer",
         "minimum": -100,
         "maximum": 100,
-        "default": 0
+        "default": 0,
+        "ai_info": "-ve =Left, +ve = Right"
       },
       "Mixer_LP.Level.D1": {
         "type": "integer",
         "minimum": -61,
         "maximum": 0,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       },
       "Doubling.Portamento.V2": {
         "type": "integer",
         "minimum": 0,
         "maximum": 200,
-        "default": 0
+        "default": 0,
+        "ai_info": "ms pitch slide"
       },
       "Doubling.Smoothing.V2": {
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
-        "default": 100
+        "default": 100,
+        "ai_info": "% smoothing. Low = pitch correction, High = natural. Unique values per voice."
       },
       "Doubling.Gender.V2": {
         "type": "integer",
         "minimum": -50,
         "maximum": 50,
-        "default": 0
+        "default": 0,
+        "ai_info": "-ve = Male, +ve = Female"
       },
       "Mixer_LP.Pan.D2": {
         "type": "integer",
         "minimum": -100,
         "maximum": 100,
-        "default": 0
+        "default": 0,
+        "ai_info": "-ve =Left, +ve = Right"
       },
       "Mixer_LP.Level.D2": {
         "type": "integer",
         "minimum": -61,
         "maximum": 0,
-        "default": -36
+        "default": -36,
+        "ai_info": "dB Range"
       },
       "Doubling.Portamento.V3": {
         "type": "integer",
         "minimum": 0,
         "maximum": 200,
-        "default": 0
+        "default": 0,
+        "ai_info": "ms pitch slide"
       },
       "Doubling.Smoothing.V3": {
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
-        "default": 100
+        "default": 100,
+        "ai_info": "% smoothing. Low = pitch correction, High = natural. Unique values per voice."
       },
       "Doubling.Gender.V3": {
         "type": "integer",
         "minimum": -50,
         "maximum": 50,
-        "default": 0
+        "default": 0,
+        "ai_info": "-ve = Male, +ve = Female"
       },
       "Mixer_LP.Pan.D3": {
         "type": "integer",
         "minimum": -100,
         "maximum": 100,
-        "default": 0
+        "default": 0,
+        "ai_info": "-ve =Left, +ve = Right"
       },
       "Mixer_LP.Level.D3": {
         "type": "integer",
         "minimum": -61,
         "maximum": 0,
-        "default": -61
+        "default": -61,
+        "ai_info": "dB Range"
       },
       "Doubling.Portamento.V4": {
         "type": "integer",
         "minimum": 0,
         "maximum": 200,
-        "default": 0
+        "default": 0,
+        "ai_info": "ms pitch slide"
       },
       "Doubling.Smoothing.V4": {
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
-        "default": 100
+        "default": 100,
+        "ai_info": "% smoothing. Low = pitch correction, High = natural. Unique values per voice."
       },
       "Doubling.Gender.V4": {
         "type": "integer",
         "minimum": -50,
         "maximum": 50,
-        "default": 0
+        "default": 0,
+        "ai_info": "-ve = Male, +ve = Female"
       },
       "Mixer_LP.Pan.D4": {
         "type": "integer",
         "minimum": -100,
         "maximum": 100,
-        "default": 0
+        "default": 0,
+        "ai_info": "-ve =Left, +ve = Right"
       },
       "Mixer_LP.Level.D4": {
         "type": "integer",
         "minimum": -61,
         "maximum": 0,
-        "default": -61
+        "default": -61,
+        "ai_info": "dB Range"
       }
     },
     "required": [
@@ -930,55 +987,64 @@
         "type": "integer",
         "minimum": 20,
         "maximum": 20480,
-        "default": 479
+        "default": 479,
+        "ai_info": "Freq in Hz"
       },
       "Transducer.BandLimitLP": {
         "type": "integer",
         "minimum": 20,
         "maximum": 20480,
-        "default": 4833
+        "default": 4833,
+        "ai_info": "Freq in Hz"
       },
       "Transducer.PresenceGain": {
         "type": "integer",
         "minimum": -20,
         "maximum": 20,
-        "default": 7
+        "default": 7,
+        "ai_info": "dB Range"
       },
       "Transducer.PresenceFC": {
         "type": "integer",
         "minimum": 359,
         "maximum": 5915,
-        "default": 2032
+        "default": 2032,
+        "ai_info": "Freq in Hz"
       },
       "Transducer.DistortionAmount": {
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
-        "default": 30
+        "default": 30,
+        "ai_info": "% Distortion"
       },
       "AutoGate.ManualThresholdT": {
         "type": "integer",
         "minimum": -61,
         "maximum": 0,
-        "default": -50
+        "default": -50,
+        "ai_info": "dB Range"
       },
       "Transducer.PresenceBW": {
         "type": "number",
         "minimum": 0.1,
         "maximum": 3.09,
-        "default": 0.42
+        "default": 0.42,
+        "ai_info": "EQ band width in octaves"
       },
       "Transducer.PreGain": {
         "type": "integer",
         "minimum": -20,
         "maximum": 20,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       },
       "Transducer.PostGain": {
         "type": "integer",
         "minimum": -20,
         "maximum": 20,
-        "default": -4
+        "default": -4,
+        "ai_info": "dB Range"
       },
       "HitControl.Transducer": {
         "type": "string",
@@ -1073,80 +1139,93 @@
         "type": "integer",
         "minimum": -50,
         "maximum": 50,
-        "default": -25
+        "default": -25,
+        "ai_info": "Reverb tail EQ. -ve = cut, +ve = boost"
       },
       "Mixer_LW.Width.Gtr_Reverb": {
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
-        "default": 100
+        "default": 100,
+        "ai_info": "% Mix"
       },
       "Reverb.HiFactor.Guitar": {
         "type": "integer",
         "minimum": -25,
         "maximum": 25,
-        "default": -5
+        "default": -5,
+        "ai_info": "High frequency tail level. -ve = cut, +ve = boost"
       },
       "Reverb.LoColor.Guitar": {
         "type": "integer",
         "minimum": -50,
         "maximum": 50,
-        "default": 2
+        "default": 2,
+        "ai_info": "Reverb tail EQ. -ve = cut, +ve = boost"
       },
       "Reverb.Decay.Guitar": {
         "type": "number",
         "minimum": 0,
         "maximum": 20000,
         "default": 2700,
-        "multipleOf": 10
+        "multipleOf": 10,
+        "ai_info": "ms timing"
       },
       "Reverb.PreDelay.Guitar": {
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
-        "default": 15
+        "default": 15,
+        "ai_info": "ms timing"
       },
       "Reverb.DryLevel.Guitar": {
         "type": "integer",
         "minimum": -25,
         "maximum": 0,
-        "default": -25
+        "default": -25,
+        "ai_info": "dB Range"
       },
       "Reverb.EarlyLevel.Guitar": {
         "type": "integer",
         "minimum": -25,
         "maximum": 0,
-        "default": -3
+        "default": -3,
+        "ai_info": "dB Range"
       },
       "Reverb.Diffuse.Guitar": {
         "type": "integer",
         "minimum": -50,
         "maximum": 50,
-        "default": 11
+        "default": 11,
+        "ai_info": "Reflection density. -ve = discrete echoes, +ve = smooth tail"
       },
       "Reverb.ModSpeed.Guitar": {
         "type": "integer",
         "minimum": -25,
         "maximum": 25,
-        "default": 0
+        "default": 0,
+        "ai_info": "Modulation rate in ms. Negative = reverse phase chorusing"
       },
       "Reverb.ModDepth.Guitar": {
         "type": "integer",
         "minimum": -25,
         "maximum": 25,
-        "default": 22
+        "default": 22,
+        "ai_info": "% modulation depth of reverb tail"
       },
       "Reverb.ReverbLevel.Guitar": {
         "type": "integer",
         "minimum": -25,
         "maximum": 0,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       },
       "Mixer_LW.Level.Gtr_Reverb": {
         "type": "integer",
         "minimum": -61,
         "maximum": 6,
-        "default": -20
+        "default": -20,
+        "ai_info": "dB Range"
       },
       "HitControl.Gtr_Reverb": {
         "type": "string",
@@ -1170,20 +1249,23 @@
         "type": "integer",
         "minimum": -61,
         "maximum": 0,
-        "default": -20
+        "default": -20,
+        "ai_info": "dB Range"
       },
       "Ducking.Level.Gtr_Reverb": {
         "type": "integer",
         "minimum": -61,
         "maximum": 0,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       },
       "Ducking.Speed.Gtr_Reverb": {
         "type": "integer",
         "minimum": 100,
         "maximum": 2000,
         "multipleOf": 10,
-        "default": 100
+        "default": 100,
+        "ai_info": "ms timing"
       }
     },
     "required": [
@@ -1326,43 +1408,50 @@
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
-        "default": 0
+        "default": 0,
+        "ai_info": "% feedback"
       },
       "Macro.Delay_HiCut.Guitar": {
         "type": "integer",
         "minimum": 20,
         "maximum": 20480,
-        "default": 20480
+        "default": 20480,
+        "ai_info": "Freq in Hz"
       },
       "Macro.Delay_LoCut.Guitar": {
         "type": "integer",
         "minimum": 20,
         "maximum": 20480,
-        "default": 20
+        "default": 20,
+        "ai_info": "Freq in Hz"
       },
       "Delay.Pan.Guitar": {
         "type": "integer",
         "minimum": -100,
         "maximum": 100,
-        "default": 0
+        "default": 0,
+        "ai_info": "-ve =Left, +ve = Right"
       },
       "Delay.DelayTime_L.Guitar": {
         "type": "integer",
         "minimum": 0,
         "maximum": 2500,
-        "default": 500
+        "default": 500,
+        "ai_info": "ms timing"
       },
       "Delay.DelayTime_R.Guitar": {
         "type": "integer",
         "minimum": 0,
         "maximum": 2500,
-        "default": 500
+        "default": 500,
+        "ai_info": "ms timing"
       },
       "Delay.Tempo.Guitar": {
         "type": "integer",
         "minimum": 45,
         "maximum": 300,
-        "default": 120
+        "default": 120,
+        "ai_info": "BPM"
       },
       "Delay.Trails.Guitar": {
         "type": "string",
@@ -1370,43 +1459,50 @@
           "Off",
           "On"
         ],
-        "default": "On"
+        "default": "On",
+        "ai_info": "On = delay tail fades naturally when bypassed. Off = delay cuts immediately."
       },
       "Mixer_LW.Level.Gtr_Delay": {
         "type": "integer",
         "minimum": -61,
         "maximum": 0,
-        "default": -51
+        "default": -51,
+        "ai_info": "dB Range"
       },
       "Delay.ModSpeed.Guitar": {
         "type": "number",
         "minimum": 0.05,
         "maximum": 10,
-        "default": 1
+        "default": 1,
+        "ai_info": "Freq in Hz"
       },
       "Delay.ModDepth.Guitar": {
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
-        "default": 0
+        "default": 0,
+        "ai_info": "% modulation depth of delay time. 0 = no modulation, 100 = full sweep"
       },
       "Delay.XFB_L_R.Guitar": {
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
-        "default": 0
+        "default": 0,
+        "ai_info": "already agreed: cross feedback % between delay lines"
       },
       "Delay.XFB_R_L.Guitar": {
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
-        "default": 0
+        "default": 0,
+        "ai_info": "already agreed: cross feedback % between delay lines"
       },
       "Delay.FB_L.Guitar": {
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
-        "default": 30
+        "default": 30,
+        "ai_info": "% feedback left"
       },
       "Mixer_LW.Width.Gtr_Delay": {
         "type": "integer",
@@ -1418,13 +1514,15 @@
         "type": "integer",
         "minimum": -61,
         "maximum": 0,
-        "default": -20
+        "default": -20,
+        "ai_info": "dB Range"
       },
       "Ducking.Level.Gtr_Delay": {
         "type": "integer",
         "minimum": -61,
         "maximum": 0,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       },
       "Ducking.Enable.Gtr_Delay": {
         "type": "string",
@@ -1438,7 +1536,8 @@
         "type": "integer",
         "minimum": 100,
         "maximum": 2000,
-        "default": 600
+        "default": 600,
+        "ai_info": "ms timing"
       }
     },
     "required": [
@@ -1501,13 +1600,15 @@
         "type": "integer",
         "minimum": 45,
         "maximum": 300,
-        "default": 120
+        "default": 120,
+        "ai_info": "BPM"
       },
       "GtrRhythm.Depth": {
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
-        "default": 50
+        "default": 50,
+        "ai_info": "0 = subtle modulation, 100 = hard gate on/off chop."
       },
       "HitControl.Gtr_Rhythmic": {
         "type": "string",
@@ -1621,7 +1722,8 @@
         "type": "integer",
         "minimum": -50,
         "maximum": 50,
-        "default": -16
+        "default": -16,
+        "ai_info": "Reverb tail EQ. -ve = cut, +ve = boost"
       },
       "Mixer_LW.Width.Voc_Reverb": {
         "type": "integer",
@@ -1633,80 +1735,93 @@
         "type": "integer",
         "minimum": -25,
         "maximum": 25,
-        "default": 9
+        "default": 9,
+        "ai_info": "High frequency tail level. -ve = cut, +ve = boost"
       },
       "Reverb.LoColor.Voice": {
         "type": "integer",
         "minimum": -50,
         "maximum": 50,
-        "default": 0
+        "default": 0,
+        "ai_info": "Reverb tail EQ. -ve = cut, +ve = boost"
       },
       "Reverb.Decay.Voice": {
         "type": "integer",
         "minimum": 0,
         "maximum": 20000,
         "default": 4700,
-        "multipleOf": 10
+        "multipleOf": 10,
+        "ai_info": "ms timing"
       },
       "Reverb.PreDelay.Voice": {
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
-        "default": 70
+        "default": 70,
+        "ai_info": "ms timing"
       },
       "Reverb.EarlyLevel.Voice": {
         "type": "integer",
         "minimum": -25,
         "maximum": 0,
-        "default": -25
+        "default": -25,
+        "ai_info": "dB Range"
       },
       "Reverb.Diffuse.Voice": {
         "type": "integer",
         "minimum": -50,
         "maximum": 50,
-        "default": 0
+        "default": 0,
+        "ai_info": "Reflection density. -ve = discrete echoes, +ve = smooth tail"
       },
       "Reverb.DryLevel.Voice": {
         "type": "integer",
         "minimum": -25,
         "maximum": 0,
-        "default": -25
+        "default": -25,
+        "ai_info": "dB Range"
       },
       "Reverb.ModSpeed.Voice": {
         "type": "integer",
         "minimum": -25,
         "maximum": 25,
-        "default": 10
+        "default": 10,
+        "ai_info": "Modulation rate in ms. Negative = reverse phase chorusing"
       },
       "Reverb.ModDepth.Voice": {
         "type": "integer",
         "minimum": -25,
         "maximum": 25,
-        "default": 13
+        "default": 13,
+        "ai_info": "% modulation depth of reverb tail"
       },
       "Mixer_L.Lead2Reverb": {
         "type": "integer",
         "minimum": -61,
         "maximum": 0,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       },
       "Mixer_L.Harm2Reverb": {
         "type": "integer",
         "minimum": -61,
         "maximum": 0,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       },
       "Mixer_LW.Level.Voc_Reverb": {
         "type": "integer",
         "minimum": -61,
         "maximum": 6,
-        "default": -25
+        "default": -25,
+        "ai_info": "dB Range"
       },
       "LeadLevel.Reverb": {
         "type": "integer",
         "minimum": -61,
         "maximum": 0,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       },
       "HitControl.Reverb": {
         "type": "string",
@@ -1722,31 +1837,36 @@
         "type": "integer",
         "minimum": -31,
         "maximum": 30,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       },
       "Mixer_L.Choir2Reverb": {
         "type": "integer",
         "minimum": -61,
         "maximum": 0,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       },
       "Ducking.Threshold.Voc_Reverb": {
         "type": "integer",
         "minimum": -61,
         "maximum": 0,
-        "default": -20
+        "default": -20,
+        "ai_info": "dB Range"
       },
       "Ducking.Level.Voc_Reverb": {
         "type": "integer",
         "minimum": -61,
         "maximum": 0,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       },
       "Ducking.Speed.Voc_Reverb": {
         "type": "integer",
         "minimum": 100,
         "maximum": 2000,
-        "default": 100
+        "default": 100,
+        "ai_info": "ms timing"
       },
       "Ducking.Enable.Voc_Reverb": {
         "type": "string",
@@ -1760,7 +1880,8 @@
         "type": "integer",
         "minimum": -25,
         "maximum": 0,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       }
     },
     "required": [
@@ -1805,7 +1926,8 @@
           "Robot",
           "Pedal"
         ],
-        "default": "Pop"
+        "default": "Pop",
+        "ai_info": "Hardtune creative effect only. NOT global pitch correction. Rule 7f applies."
       },
       "Correct.Key": {
         "type": "string",
@@ -1823,7 +1945,8 @@
           "A#",
           "B"
         ],
-        "default": "C"
+        "default": "C",
+        "ai_info": "Hardtune creative effect only. NOT global pitch correction. Rule 7f applies."
       },
       "Correct.KeySource": {
         "type": "string",
@@ -1833,7 +1956,8 @@
           "Robot Mode",
           "Pedal Mode"
         ],
-        "default": "Follow Harmony"
+        "default": "Follow Harmony",
+        "ai_info": "Hardtune creative effect only. NOT global pitch correction. Rule 7f applies."
       },
       "Correct.Scale": {
         "type": "string",
@@ -1845,26 +1969,30 @@
           "Chromatic",
           "Custom"
         ],
-        "default": "Major"
+        "default": "Major",
+        "ai_info": "Hardtune creative effect only. NOT global pitch correction. Rule 7f applies."
       },
       "Correct.Rate": {
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
-        "default": 100
+        "default": 100,
+        "ai_info": "Pitch correction speed. Low = gradual slide, High = instant snap (70-100 = T-Pain effect). Hardtune creative effect only. NOT global pitch correction. Rule 7f applies."
       },
       "Correct.Amount": {
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
-        "default": 100
+        "default": 100,
+        "ai_info": "% strength of correction. Hardtune creative effect only. NOT global pitch correction. Rule 7f applies."
       },
       "Correct.Window": {
         "type": "integer",
         "minimum": 0,
         "maximum": 600,
         "default": 600,
-        "multipleOf": 10
+        "multipleOf": 10,
+        "ai_info": "Pitch correction window in cents. Wider = more notes corrected. Hardtune creative effect only. NOT global pitch correction. Rule 7f applies."
       },
       "HitControl.Correct": {
         "type": "string",
@@ -1874,19 +2002,22 @@
           "Hit+",
           "Hit-"
         ],
-        "default": "Off"
+        "default": "Off",
+        "ai_info": "Hardtune creative effect only. NOT global pitch correction. Rule 7f applies."
       },
       "Correct.Lead_Gender": {
         "type": "integer",
         "minimum": -50,
         "maximum": 50,
-        "default": 0
+        "default": 0,
+        "ai_info": "-ve = Male, +ve = Female. Hardtune creative effect only. NOT global pitch correction. Rule 7f applies."
       },
       "Correct.Shift": {
         "type": "integer",
         "minimum": -36,
         "maximum": 36,
-        "default": 0
+        "default": 0,
+        "ai_info": "Semitone Shift. Hardtune creative effect only. NOT global pitch correction. Rule 7f applies."
       }
     },
     "required": [
@@ -1910,19 +2041,22 @@
         "type": "integer",
         "minimum": -6,
         "maximum": 6,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       },
       "Mixer_LP.Pan.Lead": {
         "type": "integer",
         "minimum": -100,
         "maximum": 100,
-        "default": 0
+        "default": 0,
+        "ai_info": "-ve =Left, +ve = Right"
       },
       "Mixer_L.Preset_Trim.Gtr": {
         "type": "integer",
         "minimum": -6,
         "maximum": 6,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       },
       "Preset.PrePost.Gtr": {
         "type": "string",
@@ -1930,19 +2064,22 @@
           "Post Effects",
           "Pre Effects"
         ],
-        "default": "Post Effects"
+        "default": "Pre Effects",
+        "ai_info": "Pre = guitar effects baked into loop recording. Post = effects remain adjustable after loop is recorded."
       },
       "LeadLevel.Preset": {
         "type": "integer",
         "minimum": -61,
         "maximum": 0,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       },
       "Guitar.Pan": {
         "type": "integer",
         "minimum": -100,
         "maximum": 100,
-        "default": 0
+        "default": 0,
+        "ai_info": "-ve =Left, +ve = Right"
       },
       "Copyright.Info": {
         "type": "string",
@@ -2006,13 +2143,15 @@
         "type": "integer",
         "minimum": -61,
         "maximum": 0,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       },
       "Mixer_L.Harm2Choir": {
         "type": "integer",
         "minimum": -61,
         "maximum": 0,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       }
     },
     "required": [
@@ -2070,7 +2209,8 @@
         "type": "integer",
         "minimum": 20,
         "maximum": 20480,
-        "default": 20480
+        "default": 20480,
+        "ai_info": "Freq in Hz"
       },
       "Mixer_LW.Width.Gtr_uMod": {
         "type": "integer",
@@ -2082,13 +2222,15 @@
         "type": "number",
         "minimum": 0.05,
         "maximum": 10,
-        "default": 1.5
+        "default": 1.5,
+        "ai_info": "Freq in Hz"
       },
       "Macro.uMod_LoCut.Guitar": {
         "type": "integer",
         "minimum": 20,
         "maximum": 20480,
-        "default": 20
+        "default": 20,
+        "ai_info": "Freq in Hz"
       },
       "Macro.uMod_Depth.Guitar": {
         "type": "integer",
@@ -2100,49 +2242,57 @@
         "type": "integer",
         "minimum": -100,
         "maximum": 100,
-        "default": 20
+        "default": 20,
+        "ai_info": "feedback % between delay lines. -ve = inverted, 0 = none, +ve = normal"
       },
       "MicroMod.FB_L.Guitar": {
         "type": "integer",
         "minimum": -100,
         "maximum": 100,
-        "default": 20
+        "default": 20,
+        "ai_info": "feedback % between delay lines. -ve = inverted, 0 = none, +ve = normal"
       },
       "MicroMod.XFB_L.Guitar": {
         "type": "integer",
         "minimum": -100,
         "maximum": 100,
-        "default": 20
+        "default": 20,
+        "ai_info": "Cross feedback % between delay lines. -ve = inverted, 0 = none, +ve = normal"
       },
       "MicroMod.XFB_R.Guitar": {
         "type": "integer",
         "minimum": -100,
         "maximum": 100,
-        "default": 20
+        "default": 20,
+        "ai_info": "Cross feedback % between delay lines. -ve = inverted, 0 = none, +ve = normal"
       },
       "MicroMod.Delay_L.Guitar": {
         "type": "number",
         "minimum": 0,
         "maximum": 50,
-        "default": 5
+        "default": 5,
+        "ai_info": "ms timing"
       },
       "MicroMod.Delay_R.Guitar": {
         "type": "number",
         "minimum": 0,
         "maximum": 50,
-        "default": 25
+        "default": 25,
+        "ai_info": "ms timing"
       },
       "MicroMod.Mod_LR_Phase.Guitar": {
         "type": "integer",
         "minimum": 0,
         "maximum": 180,
-        "default": 0
+        "default": 0,
+        "ai_info": "LFO phase offset in degrees. 0 = centre, 180 = wide stereo"
       },
       "Mixer_LW.Level.Gtr_uMod": {
         "type": "integer",
         "minimum": -61,
         "maximum": 0,
-        "default": -51
+        "default": -51,
+        "ai_info": "dB Range"
       },
       "HitControl.Gtr_Micromod": {
         "type": "string",
@@ -2158,13 +2308,15 @@
         "type": "integer",
         "minimum": -25,
         "maximum": 25,
-        "default": 9
+        "default": 9,
+        "ai_info": "small pitch shift in cents"
       },
       "Guitar.uModBypassGain": {
         "type": "integer",
         "minimum": -61,
         "maximum": 0,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       }
     },
     "required": [
@@ -2311,73 +2463,85 @@
         "type": "integer",
         "minimum": -12,
         "maximum": 12,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       },
       "ParEq.Hi_Freq.Harm": {
         "type": "integer",
         "minimum": 20,
         "maximum": 20480,
-        "default": 6089
+        "default": 6089,
+        "ai_info": "Freq in Hz"
       },
       "ParEq.Low_Gain.Harm": {
         "type": "integer",
         "minimum": -12,
         "maximum": 12,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       },
       "ParEq.Low_Freq.Harm": {
         "type": "integer",
         "minimum": 20,
         "maximum": 20480,
-        "default": 180
+        "default": 180,
+        "ai_info": "Freq in Hz"
       },
       "Harmony.HumanAmount": {
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
-        "default": 0
+        "default": 0,
+        "ai_info": "% Mix"
       },
       "Harmony.VibratoAmount": {
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
-        "default": 50
+        "default": 50,
+        "ai_info": "% Vibrato"
       },
       "ParEq.Par1_Gain.Harm": {
         "type": "integer",
         "minimum": -12,
         "maximum": 12,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       },
       "ParEq.Par1_Freq.Harm": {
         "type": "integer",
         "minimum": 20,
         "maximum": 20480,
-        "default": 830
+        "default": 830,
+        "ai_info": "Freq in Hz"
       },
       "ParEq.Hi_BW.Harm": {
         "type": "number",
         "minimum": 0.1,
         "maximum": 9,
-        "default": 1
+        "default": 1,
+        "ai_info": "EQ band width in octaves"
       },
       "ParEq.Par1_BW.Harm": {
         "type": "number",
         "minimum": 0.1,
         "maximum": 9,
-        "default": 1
+        "default": 1,
+        "ai_info": "EQ band width in octaves"
       },
       "ParEq.Low_BW.Harm": {
         "type": "number",
         "minimum": 0.1,
         "maximum": 9,
-        "default": 1
+        "default": 1,
+        "ai_info": "EQ band width in octaves"
       },
       "Harmony.Attack": {
         "type": "integer",
         "minimum": 0,
         "maximum": 1000,
-        "default": 0
+        "default": 0,
+        "ai_info": "ms timing"
       },
       "HitControl.Harmony": {
         "type": "string",
@@ -2393,123 +2557,143 @@
         "type": "integer",
         "minimum": -61,
         "maximum": 6,
-        "default": -9
+        "default": -9,
+        "ai_info": "dB Range"
       },
       "LeadLevel.Harmony": {
         "type": "integer",
         "minimum": -61,
         "maximum": 0,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       },
       "Harmony_Notes_Release": {
         "type": "integer",
         "minimum": 0,
         "maximum": 20000,
         "multipleOf": 10,
-        "default": 0
+        "default": 0,
+        "ai_info": "ms timing"
       },
       "Harmony_Hold_Release": {
         "type": "integer",
         "minimum": 0,
         "maximum": 20000,
         "multipleOf": 10,
-        "default": 100
+        "default": 100,
+        "ai_info": "ms timing"
       },
       "Harmony.Notes_Portamento": {
         "type": "integer",
         "minimum": 0,
         "maximum": 200,
-        "default": 0
+        "default": 0,
+        "ai_info": "ms pitch slide"
       },
       "Harmony.Notes_Smoothing": {
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
-        "default": 0
+        "default": 0,
+        "ai_info": "% smoothing. Low = pitch correction, High = natural. Unique values per voice."
       },
       "Harmony.Notes_Gender": {
         "type": "integer",
         "minimum": -50,
         "maximum": 50,
-        "default": 0
+        "default": 0,
+        "ai_info": "-ve = Male, +ve = Female"
       },
       "Harmony.Notes_Pan": {
         "type": "integer",
         "minimum": 0,
         "maximum": 2,
-        "default": 0
+        "default": 0,
+        "ai_info": "-ve =Left, +ve = Right"
       },
       "HarmonyMapCus.Augmented4": {
         "type": "integer",
         "minimum": 0,
         "maximum": 16777215,
-        "default": 8388607
+        "default": 8388607,
+        "ai_info": "See prompt rules for HarmonyMapCus definition"
       },
       "HarmonyMapCus.Major2": {
         "type": "integer",
         "minimum": 0,
         "maximum": 16777215,
-        "default": 8388607
+        "default": 8388607,
+        "ai_info": "See prompt rules for HarmonyMapCus definition"
       },
       "HarmonyMapCus.Major3": {
         "type": "integer",
         "minimum": 0,
         "maximum": 16777215,
-        "default": 8388607
+        "default": 8388607,
+        "ai_info": "See prompt rules for HarmonyMapCus definition"
       },
       "HarmonyMapCus.Major6": {
         "type": "integer",
         "minimum": 0,
         "maximum": 16777215,
-        "default": 8388607
+        "default": 8388607,
+        "ai_info": "See prompt rules for HarmonyMapCus definition"
       },
       "HarmonyMapCus.Major7": {
         "type": "integer",
         "minimum": 0,
         "maximum": 16777215,
-        "default": 8388607
+        "default": 8388607,
+        "ai_info": "See prompt rules for HarmonyMapCus definition"
       },
       "HarmonyMapCus.Minor2": {
         "type": "integer",
         "minimum": 0,
         "maximum": 16777215,
-        "default": 8388607
+        "default": 8388607,
+        "ai_info": "See prompt rules for HarmonyMapCus definition"
       },
       "HarmonyMapCus.Minor3": {
         "type": "integer",
         "minimum": 0,
         "maximum": 16777215,
-        "default": 8388607
+        "default": 8388607,
+        "ai_info": "See prompt rules for HarmonyMapCus definition"
       },
       "HarmonyMapCus.Minor6": {
         "type": "integer",
         "minimum": 0,
         "maximum": 16777215,
-        "default": 8388607
+        "default": 8388607,
+        "ai_info": "See prompt rules for HarmonyMapCus definition"
       },
       "HarmonyMapCus.Minor7": {
         "type": "integer",
         "minimum": 0,
         "maximum": 16777215,
-        "default": 8388607
+        "default": 8388607,
+        "ai_info": "See prompt rules for HarmonyMapCus definition"
       },
       "HarmonyMapCus.Perfect4": {
         "type": "integer",
         "minimum": 0,
         "maximum": 16777215,
-        "default": 8388607
+        "default": 8388607,
+        "ai_info": "See prompt rules for HarmonyMapCus definition"
       },
       "HarmonyMapCus.Perfect5": {
         "type": "integer",
         "minimum": 0,
         "maximum": 16777215,
-        "default": 8388607
+        "default": 8388607,
+        "ai_info": "See prompt rules for HarmonyMapCus definition"
       },
       "HarmonyMapCus.Root": {
         "type": "integer",
         "minimum": 0,
         "maximum": 16777215,
-        "default": 8388607
+        "default": 8388607,
+        "ai_info": "See prompt rules for HarmonyMapCus definition"
       }
     },
     "required": [
@@ -2673,7 +2857,8 @@
           "C6",
           "C#6"
         ],
-        "default": "C1"
+        "default": "C1",
+        "ai_info": "Fixed Mode only — sets the locked key when no live instrument input is tracking. Ignored when Mode = NaturalPlay or MIDI."
       },
       "Harmony.Int_NP.V1": {
         "type": "string",
@@ -2778,7 +2963,8 @@
           "+23 Semitones",
           "+24 Semitones"
         ],
-        "default": "-20 Semitones"
+        "default": "-20 Semitones",
+        "ai_info": "Interval distance for Shift/Fixed/Pedal modes only. Ignored in NaturalPlay."
       },
       "Harmony.Int_scale.V2": {
         "type": "string",
@@ -2883,7 +3069,8 @@
           "+23 Semitones",
           "+24 Semitones"
         ],
-        "default": "-24 Semitones"
+        "default": "-24 Semitones",
+        "ai_info": "Interval distance for Shift/Fixed/Pedal modes only. Ignored in NaturalPlay."
       },
       "Harmony.Int_FixedRelKey.V2": {
         "type": "string",
@@ -2951,7 +3138,8 @@
           "C6",
           "C#6"
         ],
-        "default": "C1"
+        "default": "C1",
+        "ai_info": "Fixed Mode only — sets the locked key when no live instrument input is tracking. Ignored when Mode = NaturalPlay or MIDI."
       },
       "Harmony.Int_scale.V4": {
         "type": "string",
@@ -3056,7 +3244,8 @@
           "+23 Semitones",
           "+24 Semitones"
         ],
-        "default": "-24 Semitones"
+        "default": "-24 Semitones",
+        "ai_info": "Interval distance for Shift/Fixed/Pedal modes only. Ignored in NaturalPlay."
       },
       "Harmony.Int_FixedRelKey.V4": {
         "type": "string",
@@ -3124,7 +3313,8 @@
           "C6",
           "C#6"
         ],
-        "default": "C4"
+        "default": "C4",
+        "ai_info": "Fixed Mode only — sets the locked key when no live instrument input is tracking. Ignored when Mode = NaturalPlay or MIDI."
       },
       "Harmony.Int_scale.V3": {
         "type": "string",
@@ -3229,7 +3419,8 @@
           "+23 Semitones",
           "+24 Semitones"
         ],
-        "default": "-24 Semitones"
+        "default": "-24 Semitones",
+        "ai_info": "Interval distance for Shift/Fixed/Pedal modes only. Ignored in NaturalPlay."
       },
       "Harmony.Int_FixedRelKey.V3": {
         "type": "string",
@@ -3297,151 +3488,176 @@
           "C6",
           "C#6"
         ],
-        "default": "C1"
+        "default": "C1",
+        "ai_info": "Fixed Mode only — sets the locked key when no live instrument input is tracking. Ignored when Mode = NaturalPlay or MIDI."
       },
       "Harmony.Portamento.V1": {
         "type": "integer",
         "minimum": 0,
         "maximum": 200,
-        "default": 0
+        "default": 0,
+        "ai_info": "ms pitch slide"
       },
       "Harmony.Smoothing.V1": {
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
-        "default": 90
+        "default": 90,
+        "ai_info": "% smoothing. Low = pitch correction, High = natural. Unique values per voice."
       },
       "Harmony.Gender.V1": {
         "type": "integer",
         "minimum": -50,
         "maximum": 50,
-        "default": 0
+        "default": 0,
+        "ai_info": "-ve = Male, +ve = Female"
       },
       "Mixer_LP.Pan.H1": {
         "type": "integer",
         "minimum": -100,
         "maximum": 100,
-        "default": 0
+        "default": 0,
+        "ai_info": "-ve =Left, +ve = Right"
       },
       "Mixer_LP.Level.H1": {
         "type": "integer",
         "minimum": -61,
         "maximum": 0,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       },
       "Harmony.Portamento.V2": {
         "type": "integer",
         "minimum": 0,
         "maximum": 200,
-        "default": 0
+        "default": 0,
+        "ai_info": "ms pitch slide"
       },
       "Harmony.Smoothing.V2": {
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
-        "default": 90
+        "default": 90,
+        "ai_info": "% smoothing. Low = pitch correction, High = natural. Unique values per voice."
       },
       "Harmony.Gender.V2": {
         "type": "integer",
         "minimum": -50,
         "maximum": 50,
-        "default": 0
+        "default": 0,
+        "ai_info": "-ve = Male, +ve = Female"
       },
       "Mixer_LP.Pan.H2": {
         "type": "integer",
         "minimum": -100,
         "maximum": 100,
-        "default": 0
+        "default": 0,
+        "ai_info": "-ve =Left, +ve = Right"
       },
       "Mixer_LP.Level.H2": {
         "type": "integer",
         "minimum": -61,
         "maximum": 0,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       },
       "Harmony.Portamento.V3": {
         "type": "integer",
         "minimum": 0,
         "maximum": 200,
-        "default": 0
+        "default": 0,
+        "ai_info": "ms pitch slide"
       },
       "Harmony.Smoothing.V3": {
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
-        "default": 90
+        "default": 90,
+        "ai_info": "% smoothing. Low = pitch correction, High = natural. Unique values per voice."
       },
       "Harmony.Gender.V3": {
         "type": "integer",
         "minimum": -50,
         "maximum": 50,
-        "default": 0
+        "default": 0,
+        "ai_info": "-ve = Male, +ve = Female"
       },
       "Mixer_LP.Pan.H3": {
         "type": "integer",
         "minimum": -100,
         "maximum": 100,
-        "default": 0
+        "default": 0,
+        "ai_info": "-ve =Left, +ve = Right"
       },
       "Mixer_LP.Level.H3": {
         "type": "integer",
         "minimum": -61,
         "maximum": 0,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       },
       "Harmony.Portamento.V4": {
         "type": "integer",
         "minimum": 0,
         "maximum": 200,
-        "default": 0
+        "default": 0,
+        "ai_info": "ms pitch slide"
       },
       "Harmony.Smoothing.V4": {
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
-        "default": 90
+        "default": 90,
+        "ai_info": "% smoothing. Low = pitch correction, High = natural. Unique values per voice."
       },
       "Harmony.Gender.V4": {
         "type": "integer",
         "minimum": -50,
         "maximum": 50,
-        "default": 0
+        "default": 0,
+        "ai_info": "-ve = Male, +ve = Female"
       },
       "Mixer_LP.Pan.H4": {
         "type": "integer",
         "minimum": -100,
         "maximum": 100,
-        "default": 0
+        "default": 0,
+        "ai_info": "-ve =Left, +ve = Right"
       },
       "Mixer_LP.Level.H4": {
         "type": "integer",
         "minimum": -61,
         "maximum": 0,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       },
       "Harmony.Int_drone.V1": {
         "type": "integer",
         "minimum": -36,
         "maximum": 36,
-        "default": 0
+        "default": 0,
+        "ai_info": "Semitone Shift"
       },
       "Harmony.Int_drone.V2": {
         "type": "integer",
         "minimum": -36,
         "maximum": 36,
-        "default": 0
+        "default": 0,
+        "ai_info": "Semitone Shift"
       },
       "Harmony.Int_drone.V4": {
         "type": "integer",
         "minimum": -36,
         "maximum": 36,
-        "default": 0
+        "default": 0,
+        "ai_info": "Semitone Shift"
       },
       "Harmony.Int_drone.V3": {
         "type": "integer",
         "minimum": -36,
         "maximum": 36,
-        "default": 0
+        "default": 0,
+        "ai_info": "Semitone Shift"
       }
     },
     "required": [
@@ -3535,97 +3751,113 @@
         "type": "integer",
         "minimum": -18,
         "maximum": 18,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       },
       "ParEq.Hi_Freq.Guitar_Pre": {
         "type": "integer",
         "minimum": 20,
         "maximum": 20480,
-        "default": 7453
+        "default": 7453,
+        "ai_info": "Freq in Hz"
       },
       "ParEq.Par1_Gain.Guitar_Pre": {
         "type": "integer",
         "minimum": -18,
         "maximum": 18,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       },
       "ParEq.Par1_Freq.Guitar_Pre": {
         "type": "integer",
         "minimum": 20,
         "maximum": 20480,
-        "default": 604
+        "default": 604,
+        "ai_info": "Freq in Hz"
       },
       "ParEq.Hi_Gain.Guitar_Post": {
         "type": "integer",
         "minimum": -18,
         "maximum": 18,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       },
       "ParEq.Hi_BW.Guitar_Pre": {
         "type": "number",
         "minimum": 0.1,
         "maximum": 3.09,
-        "default": 3.09
+        "default": 3.09,
+        "ai_info": "EQ band width in octaves"
       },
       "ParEq.Par1_BW.Guitar_Pre": {
         "type": "number",
         "minimum": 0.1,
         "maximum": 3.09,
-        "default": 2.04
+        "default": 2.04,
+        "ai_info": "EQ band width in octaves"
       },
       "ParEq.Par1_Gain.Guitar_Post": {
         "type": "integer",
         "minimum": -18,
         "maximum": 18,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       },
       "ParEq.Low_Gain.Guitar_Pre": {
         "type": "integer",
         "minimum": -18,
         "maximum": 18,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       },
       "ParEq.Low_Freq.Guitar_Pre": {
         "type": "integer",
         "minimum": 20,
         "maximum": 20480,
-        "default": 98
+        "default": 98,
+        "ai_info": "Freq in Hz"
       },
       "Macro.GtrAmpSag": {
         "type": "integer",
         "minimum": 0,
         "maximum": 10,
-        "default": 0
+        "default": 0,
+        "ai_info": "Tube amp power supply sag simulation. 0 = none, 10 = maximum"
       },
       "ParEq.Low_BW.Guitar_Pre": {
         "type": "number",
         "minimum": 0.1,
         "maximum": 3.09,
-        "default": 0.35
+        "default": 0.35,
+        "ai_info": "EQ band width in octaves"
       },
       "ParEq.Low_Gain.Guitar_Post": {
         "type": "integer",
         "minimum": -18,
         "maximum": 18,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       },
       "Macro.GtrAmpPreDrive": {
         "type": "integer",
         "minimum": -9,
         "maximum": 60,
-        "default": -8
+        "default": -8,
+        "ai_info": "dB Range"
       },
       "GtrDist.DCGain": {
         "type": "integer",
         "minimum": -100,
         "maximum": 100,
-        "default": 0
+        "default": 0,
+        "ai_info": "Input level to tube simulation stage. dB"
       },
       "GtrDist.PostGain": {
         "type": "integer",
         "minimum": -40,
         "maximum": 18,
-        "default": 2
+        "default": 2,
+        "ai_info": "dB Range"
       },
       "HitControl.Gtr_Amp": {
         "type": "string",
@@ -3641,37 +3873,43 @@
         "type": "integer",
         "minimum": 20,
         "maximum": 20480,
-        "default": 1140
+        "default": 1140,
+        "ai_info": "Freq in Hz"
       },
       "ParEq.Hi_BW.Guitar_Post": {
         "type": "number",
         "minimum": 0.1,
         "maximum": 3.09,
-        "default": 1
+        "default": 1,
+        "ai_info": "EQ band width in octaves"
       },
       "ParEq.Par1_BW.Guitar_Post": {
         "type": "number",
         "minimum": 0.1,
         "maximum": 3.09,
-        "default": 1
+        "default": 1,
+        "ai_info": "EQ band width in octaves"
       },
       "ParEq.Par1_Freq.Guitar_Post": {
         "type": "integer",
         "minimum": 20,
         "maximum": 20480,
-        "default": 987
+        "default": 987,
+        "ai_info": "Freq in Hz"
       },
       "ParEq.Low_Freq.Guitar_Post": {
         "type": "integer",
         "minimum": 20,
         "maximum": 20480,
-        "default": 1140
+        "default": 1140,
+        "ai_info": "Freq in Hz"
       },
       "ParEq.Low_BW.Guitar_Post": {
         "type": "number",
         "minimum": 0.1,
         "maximum": 3.09,
-        "default": 1
+        "default": 1,
+        "ai_info": "EQ band width in octaves"
       },
       "GtrDist.Mode": {
         "type": "string",
@@ -3685,25 +3923,46 @@
         "type": "integer",
         "minimum": -20,
         "maximum": 20,
-        "default": -12
+        "default": -12,
+        "ai_info": "dB Range"
       },
       "GtrSpkrEmu.Q": {
-        "type": "number",
-        "minimum": 0.1,
-        "maximum": 8,
-        "default": 8
+		"type": "string",
+        "enum": [
+		  "0.1",
+		  "0.13",
+		  "0.18",
+		  "0.24",
+		  "0.32",
+		  "0.42",
+		  "0.56",
+		  "0.75",
+		  "1.0",
+		  "1.3",
+		  "1.8",
+		  "2.4",
+		  "3.2",
+		  "4.2",
+		  "5.6",
+		  "7.5",
+		  "8.0"
+        ],
+        "default": "8.0",
+		"ai_info": "EQ band width in octaves"     
       },
       "GtrSpkrEmu.Fc": {
         "type": "integer",
         "minimum": 20,
         "maximum": 20480,
-        "default": 20480
+        "default": 20480,
+        "ai_info": "Freq in Hz"
       },
       "GtrDist.LowCut_FC": {
         "type": "integer",
         "minimum": 20,
         "maximum": 160,
-        "default": 20
+        "default": 20,
+        "ai_info": "Freq in Hz"
       }
     },
     "required": [
@@ -3755,7 +4014,8 @@
         "type": "integer",
         "minimum": -9,
         "maximum": 60,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       },
       "HitControl.Gtr_Boost": {
         "type": "string",
@@ -3771,7 +4031,8 @@
         "type": "integer",
         "minimum": -40,
         "maximum": 18,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       }
     },
     "required": [
@@ -3837,7 +4098,8 @@
         "type": "integer",
         "minimum": 20,
         "maximum": 20480,
-        "default": 20480
+        "default": 20480,
+        "ai_info": "Freq in Hz"
       },
       "Mixer_LW.Width.Voc_uMod": {
         "type": "integer",
@@ -3849,61 +4111,71 @@
         "type": "integer",
         "minimum": 20,
         "maximum": 20480,
-        "default": 20
+        "default": 20,
+        "ai_info": "Freq in Hz"
       },
       "MicroMod.Delay_R.Voice": {
         "type": "number",
         "minimum": 0,
         "maximum": 50,
-        "default": 25
+        "default": 25,
+        "ai_info": "ms timing"
       },
       "MicroMod.Delay_L.Voice": {
         "type": "number",
         "minimum": 0,
         "maximum": 50,
-        "default": 5
+        "default": 5,
+        "ai_info": "ms timing"
       },
       "Macro.uMod_Detune.Voice": {
         "type": "integer",
         "minimum": -25,
         "maximum": 25,
-        "default": 9
+        "default": 9,
+        "ai_info": "small pitch shift in cents"
       },
       "MicroMod.FB_L.Voice": {
         "type": "integer",
         "minimum": -100,
         "maximum": 100,
-        "default": 20
+        "default": 20,
+        "ai_info": "feedback % between delay lines. -ve = inverted, 0 = none, +ve = normal"
       },
       "MicroMod.FB_R.Voice": {
         "type": "integer",
         "minimum": -100,
         "maximum": 100,
-        "default": 20
+        "default": 20,
+        "ai_info": "feedback % between delay lines. -ve = inverted, 0 = none, +ve = normal"
       },
       "MicroMod.XFB_L.Voice": {
         "type": "integer",
         "minimum": -100,
         "maximum": 100,
-        "default": 20
+        "default": 20,
+        "ai_info": "Cross feedback % between delay lines. -ve = inverted, 0 = none, +ve = normal"
       },
       "MicroMod.XFB_R.Voice": {
         "type": "integer",
         "minimum": -100,
         "maximum": 100,
-        "default": 20
+        "default": 20,
+        "ai_info": "Cross feedback % between delay lines. -ve = inverted, 0 = none, +ve = normal"
       },
       "MicroMod.Mod_LR_Phase.Voice": {
         "type": "integer",
         "minimum": 0,
         "maximum": 180,
-        "default": 0
+        "default": 0,
+        "ai_info": "LFO phase offset in degrees. 0 = centre, 180 = wide stereo"
       },
       "MicroMod.Mod_Speed.Voice": {
         "type": "number",
         "minimum": 0.05,
         "maximum": 10,
-        "default": 0.05
+        "default": 0.05,
+        "ai_info": "Freq in Hz"
       },
       "Macro.uMod_Depth.Voice": {
         "type": "integer",
@@ -3915,13 +4187,15 @@
         "type": "integer",
         "minimum": -61,
         "maximum": 0,
-        "default": -2
+        "default": -2,
+        "ai_info": "dB Range"
       },
       "LeadLevel.uMod": {
         "type": "integer",
         "minimum": -61,
         "maximum": 0,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       },
       "HitControl.Micromod": {
         "type": "string",
@@ -3937,19 +4211,22 @@
         "type": "integer",
         "minimum": -61,
         "maximum": 0,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       },
       "Mixer_L.Harm2uMod": {
         "type": "integer",
         "minimum": -61,
         "maximum": 0,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       },
       "Mixer_L.Choir2uMod": {
         "type": "integer",
         "minimum": -61,
         "maximum": 0,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       }
     },
     "required": [
@@ -4081,79 +4358,92 @@
         "type": "integer",
         "minimum": 20,
         "maximum": 20480,
-        "default": 3620
+        "default": 3620,
+        "ai_info": "Freq in Hz"
       },
       "Mixer_LW.Width.Voc_Delay": {
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
-        "default": 100
+        "default": 100,
+        "ai_info": "% Mix"
       },
       "Delay.FeedbackControl.Voice": {
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
-        "default": 50
+        "default": 50,
+        "ai_info": "% Mix"
       },
       "Macro.Delay_LoCut.Voice": {
         "type": "integer",
         "minimum": 20,
         "maximum": 20480,
-        "default": 20
+        "default": 20,
+        "ai_info": "Freq in Hz"
       },
       "Mixer_L.Lead2DelayPan": {
         "type": "integer",
         "minimum": -100,
         "maximum": 100,
-        "default": 0
+        "default": 0,
+        "ai_info": "-ve =Left, +ve = Right"
       },
       "Delay.FB_L.Voice": {
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
-        "default": 30
+        "default": 30,
+        "ai_info": "% Mix"
       },
       "Delay.FB_R.Voice": {
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
-        "default": 30
+        "default": 30,
+        "ai_info": "% Mix"
       },
       "Delay.XFB_L_R.Voice": {
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
-        "default": 0
+        "default": 0,
+        "ai_info": "already agreed: cross feedback % between delay lines"
       },
       "Delay.XFB_R_L.Voice": {
         "type": "integer",
         "minimum": 0,
         "maximum": 100,
-        "default": 0
+        "default": 0,
+        "ai_info": "already agreed: cross feedback % between delay lines"
       },
       "Delay.DelayTime_L.Voice": {
         "type": "integer",
         "minimum": 0,
         "maximum": 2500,
-        "default": 500
+        "default": 500,
+        "ai_info": "ms timing"
       },
       "Delay.DelayTime_R.Voice": {
         "type": "integer",
         "minimum": 0,
         "maximum": 2500,
-        "default": 500
+        "default": 500      ,
+        "ai_info": "ms timing"
       },
       "Mixer_LW.Level.Voc_Delay": {
         "type": "integer",
         "minimum": -61,
         "maximum": 6,
-        "default": -19
+        "default": -19,
+        "ai_info": "dB Range"
       },
       "LeadLevel.Delay": {
         "type": "integer",
         "minimum": -61,
         "maximum": 0,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       },
       "HitControl.Delay": {
         "type": "string",
@@ -4169,25 +4459,29 @@
         "type": "integer",
         "minimum": -61,
         "maximum": 0,
-        "default": -2
+        "default": -2,
+        "ai_info": "dB Range"
       },
       "Mixer_L.Choir2Delay": {
         "type": "integer",
         "minimum": -61,
         "maximum": 0,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       },
       "Mixer_L.Harm2Delay": {
         "type": "integer",
         "minimum": -61,
         "maximum": 0,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       },
       "Mixer_L.Lead2Delay": {
         "type": "integer",
         "minimum": -61,
         "maximum": 0,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       },
       "Delay.Trails.Voice": {
         "type": "string",
@@ -4195,7 +4489,8 @@
           "Off",
           "On"
         ],
-        "default": "On"
+        "default": "On",
+        "ai_info": "On = delay tail fades naturally when bypassed. Off = delay cuts immediately."
       },
       "Macro.Delay_EQ_Mode.Voice": {
         "type": "string",
@@ -4203,25 +4498,29 @@
           "Insert",
           "Feedback"
         ],
-        "default": "Feedback"
+        "default": "Feedback",
+        "ai_info": "Controls Adaptive Tone EQ and de-essing applied to delay echoes. Feedback = applied each repeat, Input = applied once at source."
       },
       "Ducking.Speed.Voc_Delay": {
         "type": "integer",
         "minimum": 100,
         "maximum": 2000,
-        "default": 100
+        "default": 100,
+        "ai_info": "ms timing"
       },
       "Ducking.Level.Voc_Delay": {
         "type": "integer",
         "minimum": -61,
         "maximum": 0,
-        "default": 0
+        "default": 0,
+        "ai_info": "dB Range"
       },
       "Delay.Pan.Voice": {
         "type": "integer",
         "minimum": -100,
         "maximum": 100,
-        "default": 0
+        "default": 0,
+        "ai_info": "-ve =Left, +ve = Right"
       },
       "Delay.Source.Voice": {
         "type": "string",
@@ -4243,13 +4542,15 @@
         "type": "integer",
         "minimum": 45,
         "maximum": 300,
-        "default": 120
+        "default": 120,
+        "ai_info": "BPM"
       },
       "Ducking.Threshold.Voc_Delay": {
         "type": "integer",
         "minimum": -61,
         "maximum": 0,
-        "default": -20
+        "default": -20,
+        "ai_info": "dB Range"
       }
     },
     "required": [
